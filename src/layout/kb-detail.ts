@@ -10,6 +10,7 @@ import { Alert } from "../data/alert";
 import "./kb-layout";
 import "../components/ha-card";
 import "../components/kb-display-version";
+import "../components/kb-hass-version";
 
 @customElement("kb-detail")
 class KbDetail extends LitElement {
@@ -65,6 +66,11 @@ class KbDetail extends LitElement {
               `
             : ""}
           <br />
+          <b>Home Assistant:</b>
+          <kb-hass-version
+            .version=${this.alert.homeassistant}
+          ></kb-hass-version>
+          <br /><br />
           ${this.alert.github_issue
             ? html`
                 <a href=${this.alert.github_issue}>GitHub Issue</a><br /><br />

@@ -8,6 +8,7 @@ integrations:
   - stream >0.32 <0.60
   - ffmpeg >0.54
 github_issue: https://github.com/home-assistant/home-assistant/issues/22999
+homeassistant:
 ---
 
 _This is demo content._

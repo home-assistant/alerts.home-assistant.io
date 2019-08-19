@@ -8,6 +8,7 @@ export interface Alert {
   filename: string;
   created: Date;
   updated?: Date;
+  homeassistant?: VersionSpec;
   github_issue?: string;
   integrations?: VersionSpec[];
   packages?: VersionSpec[];
