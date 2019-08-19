@@ -6,8 +6,6 @@ Home Assistant Alerts will be a database of alerts for Home Assistant users. Ale
 
 The goal will be to integrate this into Home Assistant so that users can subscribe to alerts that impact their installation. It will also function as a standalone website too.
 
-A preview of this project can be found at http://temp-demo-alerts.s3-website-us-east-1.amazonaws.com/
-
 ## Development
 
 Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:5000.
