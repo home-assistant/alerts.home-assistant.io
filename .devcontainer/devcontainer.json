@@ -1,0 +1,7 @@
+{
+    "name": "Home Assistant Alerts",
+    "image": "node",
+    "postCreateCommand": "yarn install",
+    "context": "..",
+    "appPort": 5000,
+}
