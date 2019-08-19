@@ -3,6 +3,8 @@ import commonjs from "rollup-plugin-commonjs";
 import nodeResolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 
+const production = !process.env.ROLLUP_WATCH;
+
 export default {
   input: "./src/entrypoint.ts",
   output: {
@@ -15,6 +17,6 @@ export default {
       include: "node_modules/**" // Default: undefined
     }),
     typescript(),
-    terser()
+    production && terser()
   ]
 };

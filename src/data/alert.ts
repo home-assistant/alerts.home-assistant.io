@@ -3,7 +3,7 @@ export interface VersionSpec {
   min?: string;
   max?: string;
 }
-export interface KnowledgeItem {
+export interface Alert {
   title: string;
   filename: string;
   created: Date;
@@ -12,3 +12,6 @@ export interface KnowledgeItem {
   integrations?: VersionSpec[];
   packages?: VersionSpec[];
 }
+
+export const fetchAlerts = (): Promise<Alert[]> =>
+  fetch("/alerts.js").then(r => r.json());

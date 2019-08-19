@@ -8,6 +8,10 @@ The goal will be to integrate this into Home Assistant so that users can subscri
 
 A preview of this project can be found at http://temp-demo-alerts.s3-website-us-east-1.amazonaws.com/
 
+## Development
+
+Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:5000.
+
 ## Alert metadata
 
 Alerts can have the following meta data:

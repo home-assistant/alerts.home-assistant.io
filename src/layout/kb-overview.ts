@@ -6,52 +6,55 @@ import {
   css,
   CSSResult
 } from "lit-element";
-import { KnowledgeItem } from "../data/knowledge";
+import { Alert } from "../data/alert";
+import "./kb-layout";
+import "../components/ha-card";
 
 @customElement("kb-overview")
 class KbOverview extends LitElement {
-  @property() public data?: KnowledgeItem[];
+  @property() public alerts?: Alert[];
 
   protected render() {
     return html`
-      <div class="row-spacer"></div>
-      <h1>Home Assistant Alerts</h1>
-      ${this.data
-        ? html`
-            <ul>
-              ${this.data.map(
+      <kb-layout>
+        ${this.alerts
+          ? html`
+              ${this.alerts.map(
                 kb => html`
-                  <li>
-                    <a class="title" href=${`#${kb.filename}`}>${kb.title}</a>
-                    <span class="date">
-                      ${(kb.updated || kb.created).toLocaleDateString()}
-                    </span>
-                    ${kb.integrations
-                      ? kb.integrations.map(
-                          int =>
-                            html`
-                              <span class="integration"
-                                >${int.package.toUpperCase()}</span
-                              >
-                            `
-                        )
-                      : ""}
-                    ${kb.packages
-                      ? kb.packages.map(
-                          pkg =>
-                            html`
-                              <span class="package"
-                                >${pkg.package.toUpperCase()}</span
-                              >
-                            `
-                        )
-                      : ""}
-                  </li>
+                  <a href=${`#${kb.filename}`}>
+                    <ha-card .header=${kb.title}>
+                      <div class="card-content">
+                        <span class="date">
+                          ${(kb.updated || kb.created).toLocaleDateString()}
+                        </span>
+                        ${kb.integrations
+                          ? kb.integrations.map(
+                              int =>
+                                html`
+                                  <span class="integration"
+                                    >${int.package.toUpperCase()}</span
+                                  >
+                                `
+                            )
+                          : ""}
+                        ${kb.packages
+                          ? kb.packages.map(
+                              pkg =>
+                                html`
+                                  <span class="package"
+                                    >${pkg.package.toUpperCase()}</span
+                                  >
+                                `
+                            )
+                          : ""}
+                      </div>
+                    </ha-card>
+                  </a>
                 `
               )}
-            </ul>
-          `
-        : "Loading…"}
+            `
+          : "Loading…"}
+      </kb-layout>
     `;
   }
 
@@ -63,25 +66,23 @@ class KbOverview extends LitElement {
         max-width: 800px;
       }
 
-      .row-spacer {
-        height: 56px;
+      ha-card {
+        margin: 8px 0;
       }
 
-      li {
-        line-height: 3em;
-      }
-
-      a.title {
-        color: black;
+      a {
+        color: var(--primary-text-color);
+        text-decoration: none;
       }
 
       .date {
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         font-size: 0.8em;
       }
 
-      li span {
+      .integration,
+      .package {
         text-transform: uppercase;
         border-radius: 5px;
         padding: 3px;

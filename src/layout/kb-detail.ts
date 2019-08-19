@@ -6,75 +6,101 @@ import {
   CSSResult,
   css
 } from "lit-element";
-import { KnowledgeItem } from "../data/knowledge";
-import { renderVersionSpec } from "../util/render_version_spec";
+import { Alert } from "../data/alert";
+import "./kb-layout";
+import "../components/ha-card";
+import "../components/kb-display-version";
 
 @customElement("kb-detail")
 class KbDetail extends LitElement {
   // null means data is still being loaded.
-  @property() public item?: KnowledgeItem | null;
+  @property() public alert?: Alert | null;
   @property() private _content?: HTMLElement;
   @property() private _error?: string;
 
   protected render() {
-    if (this.item === null) {
+    return html`
+      <kb-layout>
+        <a class="back-link" slot="header" href="#">⬅ Back to the overview</a>
+        ${this.renderBody()}
+      </kb-layout>
+    `;
+  }
+
+  private renderBody() {
+    if (this.alert === null) {
       return html`
-        Loading…
+        <ha-card>
+          Loading…
+        </ha-card>
       `;
     }
 
-    if (!this.item) {
+    if (!this.alert) {
       return html`
-        <div class="back-row"><a href="#">⬅ Back to the overview</a></div>
-        <p>Invalid item specified: ${this.item}.</p>
+        <ha-card>
+          Invalid item specified: ${this.alert}.
+        </ha-card>
       `;
     }
 
     return html`
-      <div class="back-row"><a href="#">⬅ Back to the overview</a></div>
-      <h1>${this.item.title}</h1>
       <div class="body">
         <div class="content">
-          ${this._error
-            ? this._error
-            : this._content
-            ? this._content
-            : "Loading…"}
+          <ha-card .header=${this.alert.title}>
+            <div class="card-content">
+              ${this._error
+                ? this._error
+                : this._content
+                ? this._content
+                : "Loading…"}
+            </div>
+          </ha-card>
         </div>
         <div class="sidebar">
-          Created: ${this.item.created.toLocaleDateString()}<br />
-          ${this.item.updated
+          Created: ${this.alert.created.toLocaleDateString()}<br />
+          ${this.alert.updated
             ? html`
-                Updated: ${this.item.updated.toLocaleDateString()}<br />
+                Updated: ${this.alert.updated.toLocaleDateString()}<br />
               `
             : ""}
           <br />
-          ${this.item.github_issue
+          ${this.alert.github_issue
             ? html`
-                <a href=${this.item.github_issue}>GitHub Issue</a><br /><br />
+                <a href=${this.alert.github_issue}>GitHub Issue</a><br /><br />
               `
             : ""}
-          ${this.item.integrations
+          ${this.alert.integrations
             ? html`
                 <b>Integrations</b>
                 <ul>
-                  ${this.item.integrations.map(
+                  ${this.alert.integrations.map(
                     int =>
                       html`
-                        <li>${renderVersionSpec(int)}</li>
+                        <li>
+                          <kb-display-version
+                            .version=${int}
+                            .href=${`https://www.home-assistant.io/components/${int.package}/`}
+                          ></kb-display-version>
+                        </li>
                       `
                   )}
                 </ul>
               `
             : ""}
-          ${this.item.packages
+          ${this.alert.packages
             ? html`
                 <b>Python Packages</b>
                 <ul>
-                  ${this.item.packages.map(
+                  ${this.alert.packages.map(
                     pkg =>
                       html`
-                        <li>${renderVersionSpec(pkg)}</li>
+                        <li>
+                          <kb-display-version
+                            .version=${pkg}
+                            .href=${`https://pypi.org/project/${pkg.package}/`}
+                          ></kb-display-version>
+                        </li>
                       `
                   )}
                 </ul>
@@ -88,19 +114,19 @@ class KbDetail extends LitElement {
   protected updated(changedProps) {
     super.updated(changedProps);
 
-    if (!changedProps.has("item")) {
+    if (!changedProps.has("alert")) {
       return;
     }
 
     this._content = undefined;
     this._error = undefined;
 
-    if (!this.item) {
+    if (!this.alert) {
       return;
     }
 
     Promise.all([
-      fetch(`/knowledge/${this.item!.filename}`).then(resp => resp.text()),
+      fetch(`/alerts/${this.alert!.filename}`).then(resp => resp.text()),
       import("../util/load_markdown")
     ])
       .then(([text, { marked, filterXSS }]) => {
@@ -132,10 +158,7 @@ class KbDetail extends LitElement {
         max-width: 800px;
       }
 
-      .back-row {
-        padding: 8px 0 24px;
-      }
-      .back-row a {
+      a.back-link {
         color: black;
       }
 
@@ -147,6 +170,11 @@ class KbDetail extends LitElement {
       }
       .sidebar {
         width: 200px;
+        margin-left: 16px;
+      }
+
+      .sidebar a {
+        color: var(--primary-color);
       }
     `;
   }

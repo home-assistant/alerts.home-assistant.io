@@ -3,7 +3,7 @@ const gulp = require("gulp");
 const path = require("path");
 const fs = require("fs");
 
-const { knowledgeDir, buildDir } = require("../paths");
+const { alertsDir, buildDir } = require("../paths");
 
 class VersionedItem {
   constructor(versionString) {
@@ -27,12 +27,12 @@ class VersionedItem {
   }
 }
 
-function gatherKnowledge() {
-  const knowledge = [];
+function gatherAlertsMetadata() {
+  const alerts = [];
 
-  const files = fs.readdirSync(knowledgeDir);
+  const files = fs.readdirSync(alertsDir);
   for (let i = 0; i < files.length; i++) {
-    const content = fs.readFileSync(path.join(knowledgeDir, files[i]), "utf-8");
+    const content = fs.readFileSync(path.join(alertsDir, files[i]), "utf-8");
     const metadataSplit = content.indexOf("---", 1);
     try {
       const metadata = yaml.safeLoad(content.substring(4, metadataSplit));
@@ -47,17 +47,17 @@ function gatherKnowledge() {
         }
       }
 
-      knowledge.push(metadata);
+      alerts.push(metadata);
     } catch (err) {
       console.error(`Error parsing ${files[i]}: ${err}`);
     }
   }
 
-  return knowledge;
+  return alerts;
 }
 
-gulp.task("gather-knowledge", done => {
-  const knowledge = gatherKnowledge();
-  fs.writeFileSync(`${buildDir}/data.js`, JSON.stringify(knowledge));
+gulp.task("gather-alerts", done => {
+  const alerts = gatherAlertsMetadata();
+  fs.writeFileSync(`${buildDir}/alerts.js`, JSON.stringify(alerts));
   done();
 });

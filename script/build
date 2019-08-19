@@ -1,5 +1,5 @@
 rm -rf dist
 cp -r public dist
-cp -r knowledge dist/
-gulp gather-knowledge
+cp -r alerts dist/
+gulp gather-alerts
 rollup -c

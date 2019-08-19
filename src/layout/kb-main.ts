@@ -1,47 +1,65 @@
-import { LitElement, customElement, html, property } from "lit-element";
-import { KnowledgeItem } from "../data/knowledge";
+import {
+  LitElement,
+  customElement,
+  html,
+  property,
+  CSSResult,
+  css
+} from "lit-element";
+import { Alert } from "../data/alert";
 import "./kb-overview";
 import "./kb-detail";
 
 @customElement("kb-main")
 class KbMain extends LitElement {
-  @property() private data?: KnowledgeItem[];
-  @property() private _item = "";
+  @property() public item = "";
+  @property() private alerts?: Alert[];
 
   protected render() {
-    return this._item
+    return this.item
       ? html`
           <kb-detail
-            .item=${this.data
-              ? this.data.find(item => item.filename === this._item)
+            .alert=${this.alerts
+              ? this.alerts.find(item => item.filename === this.item)
               : null}
           ></kb-detail>
         `
       : html`
-          <kb-overview .data=${this.data}></kb-overview>
+          <kb-overview .alerts=${this.alerts}></kb-overview>
         `;
   }
 
   firstUpdated(changedProps) {
     super.firstUpdated(changedProps);
-    (window as any).dataProm.then((data: KnowledgeItem[]) => {
-      data.forEach(item => {
-        item.created = new Date(item.created);
-        if (item.updated) {
-          item.updated = new Date(item.updated);
-        }
-      });
-      this.data = data.sort(
-        (k1, k2) =>
-          // Compare reverse so newest is on top.
-          (k2.updated || k2.created).getTime() -
-          (k1.updated || k1.created).getTime()
-      );
-    });
-    this._item = location.hash.substr(1);
+    ((window as any).dataProm || fetch("/alerts.js").then(r => r.json())).then(
+      (alerts: Alert[]) => {
+        alerts.forEach(item => {
+          item.created = new Date(item.created);
+          if (item.updated) {
+            item.updated = new Date(item.updated);
+          }
+        });
+        this.alerts = alerts.sort(
+          (a1, a2) =>
+            // Compare reverse so newest is on top.
+            (a2.updated || a2.created).getTime() -
+            (a1.updated || a1.created).getTime()
+        );
+      }
+    );
+    this.item = location.hash.substr(1);
     window.addEventListener("hashchange", () => {
-      this._item = location.hash.substr(1);
+      this.item = location.hash.substr(1);
     });
+  }
+
+  static get styles(): CSSResult {
+    return css`
+      :host {
+        --primary-color: #03a9f4;
+        --primary-text-color: #212121;
+      }
+    `;
   }
 }
 

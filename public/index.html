@@ -21,8 +21,8 @@
     <kb-main></kb-main>
 
     <script type="module" crossorigin="use-credentials">
-      import "./entrypoint.js";
-      window.dataProm = fetch("./data.js").then(r => r.json());
+      import "/entrypoint.js";
+      window.dataProm = fetch("/alerts.js").then(r => r.json());
     </script>
   </body>
 </html>
