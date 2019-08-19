@@ -57,7 +57,12 @@ class KbMain extends LitElement {
     return css`
       :host {
         --primary-color: #03a9f4;
+        --dark-primary-color: #0288d1;
+
         --primary-text-color: #212121;
+
+        --label-integration-background: #e91e63;
+        --label-package-background: #009688;
       }
     `;
   }

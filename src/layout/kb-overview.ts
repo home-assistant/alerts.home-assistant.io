@@ -17,6 +17,10 @@ class KbOverview extends LitElement {
   protected render() {
     return html`
       <kb-layout>
+        <div slot="header">
+          <span class="integration">Integration</span><br />
+          <span class="package">Python package</span>
+        </div>
         ${this.alerts
           ? html`
               ${this.alerts.map(
@@ -92,12 +96,12 @@ class KbOverview extends LitElement {
       }
 
       .integration {
-        background-color: #e91e63;
+        background-color: var(--label-integration-background);
         color: white;
       }
 
       .package {
-        background-color: #009688;
+        background-color: var(--label-package-background);
         color: white;
       }
     `;

@@ -174,7 +174,7 @@ class KbDetail extends LitElement {
       }
 
       .sidebar a {
-        color: var(--primary-color);
+        color: var(--dark-primary-color);
       }
     `;
   }
