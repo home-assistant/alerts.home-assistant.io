@@ -1,11 +1,12 @@
 import { customElement, LitElement, html, CSSResult, css } from "lit-element";
+import { haLogo } from "../components/ha-logo";
 
 @customElement("kb-layout")
 class KbLayout extends LitElement {
   protected render() {
     return html`
       <div class="header">
-        <img src="/images/logo.svg" alt="Home Assistant logo" class="logo" />
+        ${haLogo()}
         <span class="title">Home Assistant Alerts</span>
         <div class="spacer"></div>
         <slot name="header"></slot>
@@ -29,7 +30,7 @@ class KbLayout extends LitElement {
         margin-bottom: 8px;
       }
 
-      .logo {
+      svg {
         width: 64px;
         height: 64px;
         border-radius: 5px;
