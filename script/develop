@@ -1,7 +1,12 @@
+# Stop on errors
+set -e
+
+cd "$(dirname "$0")/.."
+
 rm -rf dist
 cp -r public dist
 cp -r alerts dist/
-gulp gather-alerts
-serve dist &
-rollup -c --watch
+yarn gulp gather-alerts
+yarn serve dist &
+yarn rollup -c --watch
 wait

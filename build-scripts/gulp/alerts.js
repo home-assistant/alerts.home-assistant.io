@@ -7,7 +7,11 @@ const { alertsDir, buildDir } = require("../paths");
 
 class VersionedItem {
   constructor(versionString) {
-    const parts = versionString.split(" ").map(s => s.trim());
+    const parts = versionString
+      .split(" ")
+      .map(s => s.trim())
+      // Remove empty strings
+      .filter(Boolean);
     parts.forEach((part, index) => {
       if (index === 0) {
         this.package = part;
@@ -21,7 +25,7 @@ class VersionedItem {
       } else if (part[0] === "<") {
         this.max = part.substr(1);
       } else {
-        console.warning(`Error parsing ${this.package}: ${part}`);
+        throw new Error(`Error parsing ${this.package}: ${part}`);
       }
     });
   }
@@ -39,6 +43,10 @@ function gatherAlertsMetadata() {
 
       metadata.filename = files[i];
 
+      metadata.homeassistant = new VersionedItem(
+        `homeassistant ${metadata.homeassistant || ""}`
+      );
+
       for (const versionKey of ["packages", "integrations"]) {
         if (versionKey in metadata) {
           metadata[versionKey] = metadata[versionKey].map(
@@ -50,6 +58,7 @@ function gatherAlertsMetadata() {
       alerts.push(metadata);
     } catch (err) {
       console.error(`Error parsing ${files[i]}: ${err}`);
+      throw err;
     }
   }
 

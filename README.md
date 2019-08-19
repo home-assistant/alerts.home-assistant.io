@@ -22,6 +22,10 @@ When the alert was created.
 
 When the alert was updated.
 
+### Home Assistant (required)
+
+Home Assistant versions impacted.
+
 ### GitHub issue (optional)
 
 URL of a relevant GitHub issue.
