@@ -1,0 +1,5 @@
+rm -rf dist
+cp -r public dist
+cp -r knowledge dist/
+gulp gather-knowledge
+rollup -c

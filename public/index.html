@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Alerts – Home Assistant</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <kb-main></kb-main>
+
+    <script type="module" crossorigin="use-credentials">
+      import "./entrypoint.js";
+      window.dataProm = fetch("./data.js").then(r => r.json());
+    </script>
+  </body>
+</html>
