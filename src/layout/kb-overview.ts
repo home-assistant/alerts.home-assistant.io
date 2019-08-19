@@ -23,6 +23,9 @@ class KbOverview extends LitElement {
                 kb => html`
                   <li>
                     <a class="title" href=${`#${kb.filename}`}>${kb.title}</a>
+                    <span class="date">
+                      ${(kb.updated || kb.created).toLocaleDateString()}
+                    </span>
                     ${kb.integrations
                       ? kb.integrations.map(
                           int =>
@@ -69,17 +72,22 @@ class KbOverview extends LitElement {
       }
 
       a.title {
-        display: inline-block;
         color: black;
-        margin-right: 10px;
+      }
+
+      .date {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 0.8em;
       }
 
       li span {
         text-transform: uppercase;
-        border-radius: 10px;
+        border-radius: 5px;
         padding: 3px;
         font-size: 12px;
         font-weight: 500;
+        margin: 0 2px;
       }
 
       .integration {

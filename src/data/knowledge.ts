@@ -8,6 +8,7 @@ export interface KnowledgeItem {
   filename: string;
   created: Date;
   updated?: Date;
+  github_issue?: string;
   integrations?: VersionSpec[];
   packages?: VersionSpec[];
 }

@@ -1,6 +1,5 @@
 import { LitElement, customElement, html, property } from "lit-element";
 import { KnowledgeItem } from "../data/knowledge";
-import { compare } from "../util/compare";
 import "./kb-overview";
 import "./kb-detail";
 
@@ -26,13 +25,18 @@ class KbMain extends LitElement {
   firstUpdated(changedProps) {
     super.firstUpdated(changedProps);
     (window as any).dataProm.then((data: KnowledgeItem[]) => {
-      this.data = data.sort((k1, k2) => compare(k1.title, k2.title));
-      this.data.forEach(item => {
+      data.forEach(item => {
         item.created = new Date(item.created);
         if (item.updated) {
           item.updated = new Date(item.updated);
         }
       });
+      this.data = data.sort(
+        (k1, k2) =>
+          // Compare reverse so newest is on top.
+          (k2.updated || k2.created).getTime() -
+          (k1.updated || k1.created).getTime()
+      );
     });
     this._item = location.hash.substr(1);
     window.addEventListener("hashchange", () => {

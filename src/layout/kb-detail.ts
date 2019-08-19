@@ -49,6 +49,11 @@ class KbDetail extends LitElement {
               `
             : ""}
           <br />
+          ${this.item.github_issue
+            ? html`
+                <a href=${this.item.github_issue}>GitHub Issue</a><br /><br />
+              `
+            : ""}
           ${this.item.integrations
             ? html`
                 <b>Integrations</b>
