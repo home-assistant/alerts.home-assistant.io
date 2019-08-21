@@ -3,3 +3,4 @@ cp -r public dist
 cp -r alerts dist/
 yarn gulp gather-alerts
 yarn rollup -c
+yarn gulp gen-entrypoint-prod

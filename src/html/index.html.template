@@ -22,7 +22,7 @@
     <kb-main></kb-main>
 
     <script type="module" crossorigin="use-credentials">
-      import "/entrypoint.js";
+      import "./{{ entrypoint }}";
       window.dataProm = fetch("/alerts.json").then(r => r.json());
     </script>
   </body>
