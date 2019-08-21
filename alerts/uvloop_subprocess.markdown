@@ -1,19 +1,17 @@
 ---
-title: "Stream integration incompatible with X"
+title: "Shell command is incompatible with uvloop + stream."
 created: 2019-08-18 21:11:03
 updated: 2019-08-18 23:11:03
 packages:
-  - uvloop >0.1
+  - uvloop
 integrations:
-  - stream >0.32 <0.60
-  - ffmpeg >0.54
+  - stream
+  - shell_command
 github_issue: https://github.com/home-assistant/home-assistant/issues/22999
-homeassistant:
+homeassistant: <0.98
 ---
 
-_This is demo content._
-
-There is a known issue with `uvloop` and the stream integration.
+A bug in uvloop causes the `shell_command` to stop working when the `stream` integration is loaded and Home Assistant uses the uvloop as the asyncio eventloop.
 
 # Workaround
 
@@ -22,3 +20,7 @@ Uninstall uvloop:
 ```bash
 pip3 uninstall uvloop
 ```
+
+# Fix
+
+Fixed in 0.98 by no longer installing uvloop as the default asyncio loop. If you have a manual installation, please uninstall `uvloop` by following the workaround instructions.
