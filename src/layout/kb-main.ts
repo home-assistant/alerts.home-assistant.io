@@ -58,6 +58,7 @@ class KbMain extends LitElement {
         --dark-primary-color: #0288d1;
 
         --primary-text-color: #212121;
+        --secondary-text-color: #727272;
 
         --label-integration-background: #e91e63;
         --label-package-background: #009688;

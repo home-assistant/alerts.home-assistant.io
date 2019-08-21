@@ -112,6 +112,12 @@ class KbDetail extends LitElement {
                 </ul>
               `
             : ""}
+          <a
+            href=${`https://github.com/home-assistant/alerts.home-assistant.io/tree/master/alerts/${this.alert.filename}`}
+            target="_blank"
+          >
+            Edit alert on GitHub
+          </a>
         </div>
       </div>
     `;
