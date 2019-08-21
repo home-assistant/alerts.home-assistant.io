@@ -6,7 +6,7 @@ import {
   CSSResult,
   css
 } from "lit-element";
-import { Alert } from "../data/alert";
+import { Alert, fetchAlerts } from "../data/alert";
 import "./kb-overview";
 import "./kb-detail";
 
@@ -31,22 +31,20 @@ class KbMain extends LitElement {
 
   firstUpdated(changedProps) {
     super.firstUpdated(changedProps);
-    ((window as any).dataProm || fetch("/alerts.js").then(r => r.json())).then(
-      (alerts: Alert[]) => {
-        alerts.forEach(item => {
-          item.created = new Date(item.created);
-          if (item.updated) {
-            item.updated = new Date(item.updated);
-          }
-        });
-        this.alerts = alerts.sort(
-          (a1, a2) =>
-            // Compare reverse so newest is on top.
-            (a2.updated || a2.created).getTime() -
-            (a1.updated || a1.created).getTime()
-        );
-      }
-    );
+    ((window as any).dataProm || fetchAlerts()).then((alerts: Alert[]) => {
+      alerts.forEach(item => {
+        item.created = new Date(item.created);
+        if (item.updated) {
+          item.updated = new Date(item.updated);
+        }
+      });
+      this.alerts = alerts.sort(
+        (a1, a2) =>
+          // Compare reverse so newest is on top.
+          (a2.updated || a2.created).getTime() -
+          (a1.updated || a1.created).getTime()
+      );
+    });
     this.item = location.hash.substr(1);
     window.addEventListener("hashchange", () => {
       this.item = location.hash.substr(1);

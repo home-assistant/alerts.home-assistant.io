@@ -15,4 +15,4 @@ export interface Alert {
 }
 
 export const fetchAlerts = (): Promise<Alert[]> =>
-  fetch("/alerts.js").then(r => r.json());
+  fetch("/alerts.json").then(r => r.json());

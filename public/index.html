@@ -23,7 +23,7 @@
 
     <script type="module" crossorigin="use-credentials">
       import "/entrypoint.js";
-      window.dataProm = fetch("/alerts.js").then(r => r.json());
+      window.dataProm = fetch("/alerts.json").then(r => r.json());
     </script>
   </body>
 </html>

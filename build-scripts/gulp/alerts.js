@@ -67,6 +67,6 @@ function gatherAlertsMetadata() {
 
 gulp.task("gather-alerts", done => {
   const alerts = gatherAlertsMetadata();
-  fs.writeFileSync(`${buildDir}/alerts.js`, JSON.stringify(alerts));
+  fs.writeFileSync(`${buildDir}/alerts.json`, JSON.stringify(alerts));
   done();
 });
