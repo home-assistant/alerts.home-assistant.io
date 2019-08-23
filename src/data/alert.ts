@@ -15,4 +15,5 @@ export interface Alert {
 }
 
 export const fetchAlerts = (): Promise<Alert[]> =>
-  fetch("/alerts.json").then(r => r.json());
+  // Add domain because used inside custom element which can be used anywhere
+  fetch("https://alerts.home-assistant.io/alerts.json").then(r => r.json());

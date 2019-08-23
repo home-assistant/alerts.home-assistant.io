@@ -37,3 +37,20 @@ List of impacted integrations combined with version ranges.
 ### Python packages (optional)
 
 List of impacted Python packages combined with version ranges.
+
+## Deployment
+
+Deployment is done with `script/deploy`. It will build the app and sync it to an s3 bucket.
+
+The s3 bucket needs to be configured for static website hosting with default page `index.html`.
+
+Under Permissions -> CORS Configuration, add the following:
+
+```xml
+<CORSConfiguration>
+  <CORSRule>
+    <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+  </CORSRule>
+</CORSConfiguration>
+```
