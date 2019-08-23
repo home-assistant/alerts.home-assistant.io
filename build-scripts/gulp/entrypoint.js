@@ -26,10 +26,5 @@ gulp.task("gen-entrypoint-dev", done => {
 gulp.task("gen-entrypoint-prod", done => {
   const manifest = getManifest();
   writeIndex(manifest["./src/entrypoints/app.ts"]);
-  // Change filename to longer be hashed
-  fs.renameSync(
-    path.join(buildDir, manifest["./src/entrypoints/ce-alert-link.ts"]),
-    path.join(buildDir, "ce-alert-link.js")
-  );
   done();
 });

@@ -6,19 +6,35 @@ import entrypointHashmanifest from "rollup-plugin-entrypoint-hashmanifest";
 
 const production = !process.env.ROLLUP_WATCH;
 
-export default {
-  input: ["./src/entrypoints/app.ts", "./src/entrypoints/ce-alert-link.ts"],
-  output: {
-    dir: "dist/",
-    format: "es",
-    entryFileNames: production ? "[name]-[hash].js" : "[name].js",
-    chunkFileNames: "[name]-[hash].js"
+const plugins = [
+  nodeResolve({}),
+  commonjs(),
+  typescript(),
+  production && terser()
+];
+
+export default [
+  {
+    input: "./src/entrypoints/app.ts",
+    output: {
+      dir: "dist/",
+      format: "es",
+      entryFileNames: production ? "[name]-[hash].js" : "[name].js",
+      chunkFileNames: "[name]-[hash].js"
+    },
+    plugins: [
+      ...plugins,
+      production && entrypointHashmanifest({ manifestName: "manifest.json" })
+    ]
   },
-  plugins: [
-    nodeResolve({}),
-    commonjs(),
-    typescript(),
-    production && terser(),
-    production && entrypointHashmanifest({ manifestName: "manifest.json" })
-  ]
-};
+  {
+    input: "./src/entrypoints/ce-alert-link.ts",
+    output: {
+      dir: "dist/",
+      format: "es",
+      entryFileNames: "[name].js",
+      chunkFileNames: "[name]-[hash].js"
+    },
+    plugins
+  }
+];
