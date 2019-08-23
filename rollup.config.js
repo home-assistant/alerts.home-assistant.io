@@ -7,7 +7,7 @@ import entrypointHashmanifest from "rollup-plugin-entrypoint-hashmanifest";
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  input: "./src/entrypoint.ts",
+  input: ["./src/entrypoints/app.ts", "./src/entrypoints/ce-alert-link.ts"],
   output: {
     dir: "dist/",
     format: "es",
