@@ -8,7 +8,7 @@ The goal will be to integrate this into Home Assistant so that users can subscri
 
 ## Development
 
-Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:5000.
+Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:5000 and at http://localhost:5000/demo_alert_link.html.
 
 ## Alert metadata
 
