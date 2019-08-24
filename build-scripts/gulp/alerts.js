@@ -42,6 +42,7 @@ function gatherAlertsMetadata() {
       const metadata = yaml.safeLoad(content.substring(4, metadataSplit));
 
       metadata.filename = files[i];
+      metadata.alert_url = `https://alerts.home-assistant.io/#${files[i]}`;
 
       metadata.homeassistant = new VersionedItem(
         `homeassistant ${metadata.homeassistant || ""}`
