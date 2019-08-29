@@ -1,2 +1,7 @@
+# Stop on errors
+set -e
+
+cd "$(dirname "$0")/.."
+
 script/build
 aws s3 sync dist/ s3://alerts.home-assistant.io --delete --acl public-read
