@@ -80,7 +80,7 @@ class KbOverview extends LitElement {
     return css`
       :host {
         display: block;
-        margin: 12px auto;
+        margin: 30px auto;
         max-width: 800px;
       }
 
@@ -123,6 +123,7 @@ class KbOverview extends LitElement {
         text-align: center;
         font-size: 0.8em;
         color: var(--secondary-text-color);
+        padding: 0 16px;
       }
       .footer a {
         color: var(--secondary-text-color);
