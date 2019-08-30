@@ -11,7 +11,6 @@
         font-weight: 400;
         margin: 0;
         padding: 0;
-        height: 100vh;
         background-color: #e5e5e5;
       }
 

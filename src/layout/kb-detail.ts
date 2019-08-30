@@ -166,7 +166,7 @@ class KbDetail extends LitElement {
     return css`
       :host {
         display: block;
-        margin: 12px auto;
+        margin: 30px auto;
         max-width: 800px;
       }
 
@@ -174,19 +174,28 @@ class KbDetail extends LitElement {
         color: black;
       }
 
-      .body {
-        display: flex;
-      }
-      .content {
-        flex: 1;
-      }
       .sidebar {
-        width: 200px;
-        margin-left: 16px;
+        padding: 16px;
       }
 
       .sidebar a {
         color: var(--dark-primary-color);
+      }
+
+      @media (min-width: 768px) {
+        .body {
+          display: flex;
+        }
+
+        .content {
+          flex: 1;
+        }
+
+        .sidebar {
+          width: 200px;
+          margin-left: 16px;
+          padding: 0;
+        }
       }
     `;
   }
