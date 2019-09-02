@@ -3,7 +3,7 @@ title: "Aeotec Z-Wave stick incompatible with the Raspberry Pi 4"
 created: 2019-08-29 18:20:03
 integrations:
   - zwave
-github_issue: https://github.com/home-assistant/home-assistant/issues/22999
+github_issue: https://github.com/home-assistant/home-assistant/issues/26270
 homeassistant: ""
 ---
 
