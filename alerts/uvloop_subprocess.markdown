@@ -8,7 +8,7 @@ integrations:
   - stream
   - shell_command
 github_issue: https://github.com/home-assistant/home-assistant/issues/22999
-homeassistant: <0.98
+homeassistant: "<0.98"
 ---
 
 A bug in uvloop causes the `shell_command` to stop working when the `stream` integration is loaded and Home Assistant uses the uvloop as the asyncio eventloop.

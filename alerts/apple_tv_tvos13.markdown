@@ -4,7 +4,7 @@ created: 2019-09-07 18:20:03
 integrations:
   - apple_tv
 github_issue: https://github.com/postlund/pyatv/issues/180
-homeassistant: >0.49
+homeassistant: ">0.49"
 ---
 
 Updating your Apple TV to tvOS 13 will cause the Apple TV media player integration for Home Assistant to no longer work.
