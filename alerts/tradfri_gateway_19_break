@@ -1,0 +1,10 @@
+---
+title: "Tradfri incompatible with version 1.9 of gateway"
+created: 2019-09-16 19:22:03
+integrations:
+  - tradfri
+github_issue: https://github.com/home-assistant/home-assistant/issues/26673
+homeassistant: ">0.49"
+---
+
+Updating your Tradfri gateway version 1.9 will cause the IKEA Tradfri integration for Home Assistant to no longer work.
