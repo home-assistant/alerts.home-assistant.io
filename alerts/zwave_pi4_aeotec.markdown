@@ -12,7 +12,7 @@ Z-Wave stick and the Raspberry Pi4 that causes the stick not to be detected.
 
 # Fix
 
-This can be worked around by connecting a USB 2.0 hub into the Pi, and the stick into the Pi.
+This can be worked around by connecting a USB 2.0 hub into the Pi, and the stick into the hub.
 
 Alternatively migrate to using another brand of Z-Wave stick. That would require removing all the devices from the current stick,
 and then including them with the new stick.
