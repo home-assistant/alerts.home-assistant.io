@@ -6,6 +6,6 @@ cd "$(dirname "$0")/.."
 rm -rf dist
 cp -r public dist
 cp -r alerts dist/
-yarn gulp gather-alerts
+yarn gulp gather-alerts create-feeds
 yarn rollup -c
 yarn gulp gen-entrypoint-prod

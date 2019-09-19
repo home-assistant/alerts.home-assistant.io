@@ -2,6 +2,9 @@ const yaml = require("js-yaml");
 const gulp = require("gulp");
 const path = require("path");
 const fs = require("fs");
+const jsonfeedToAtom = require("jsonfeed-to-atom");
+const marked = require("marked");
+const xss = require("xss");
 
 const { alertsDir, buildDir } = require("../paths");
 
@@ -69,5 +72,41 @@ function gatherAlertsMetadata() {
 gulp.task("gather-alerts", done => {
   const alerts = gatherAlertsMetadata();
   fs.writeFileSync(`${buildDir}/alerts.json`, JSON.stringify(alerts));
+  done();
+});
+
+gulp.task("create-feeds", done => {
+  const alerts = gatherAlertsMetadata();
+  const jsonfeed = {
+    version: "https://jsonfeed.org/version/1",
+    title: "Home Assistant - Alerts",
+    home_page_url: "https://alerts.home-assistant.io",
+    feed_url: "https://alerts.home-assistant.io/feed.json",
+    description: "Alerts for breaking integrations of Home Assistant.",
+    icon: "https://alerts.home-assistant.io/images/favicon.png"
+  };
+  jsonfeed.items = alerts.map(alert => {
+    const text = fs.readFileSync(path.join(alertsDir, alert.filename), "utf-8");
+    return {
+      title: alert.title,
+      date_published: alert.created ? alert.created.toISOString() : undefined,
+      date_updated: alert.updated ? alert.updated.toISOString() : undefined,
+      url: alert.alert_url,
+      id: alert.filename,
+      content_html: xss(
+        marked(
+          // Strip out the metadata
+          text.substr(text.indexOf("---", 1) + 4),
+          {
+            breaks: true,
+            gfm: true,
+            tables: true
+          }
+        )
+      )
+    };
+  });
+  fs.writeFileSync(`${buildDir}/feed.json`, JSON.stringify(jsonfeed));
+  fs.writeFileSync(`${buildDir}/feed.xml`, jsonfeedToAtom(jsonfeed));
   done();
 });
