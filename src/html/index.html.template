@@ -6,6 +6,18 @@
     <link rel="icon" href="/images/favicon.png" type="image/png" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Home Assistant Alerts" href="/feed.xml" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta property="fb:app_id" content="338291289691179">
+    <meta property="og:title" content="Home Assistant Alerts">
+    <meta property="og:site_name" content="Home Assistant Alerts">
+    <meta property="og:url" content="https://alerts.home-assistant.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Be notified of breaking integrations in Home Assistant.">
+    <meta property="og:image" content="https://cast.home-assistant.io/images/google-nest-hub.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@home_assistant">
+    <meta name="twitter:title" content="Home Assistant Alerts">
+    <meta name="twitter:description" content="Be notified of breaking integrations in Home Assistant.">
+    <meta name="twitter:image" content="https://alerts.home-assistant.io/images/favicon.png">
     <style>
       body {
         font-family: Roboto, sans-serif;
