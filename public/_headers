@@ -1,5 +1,5 @@
 /*
-  Cache-Control: public, max-age: 0, s-maxage=3600, must-revalidate
+  Cache-Control: public, max-age: 0, s-maxage=900, must-revalidate
   Content-Security-Policy: form-action https:
   Feature-Policy: vibrate 'none'; geolocation 'none'; midi 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; payment 'none'
   Referrer-Policy: no-referrer-when-downgrade
