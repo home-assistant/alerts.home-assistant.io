@@ -86,7 +86,7 @@ class KbDetail extends LitElement {
                         <li>
                           <kb-display-version
                             .version=${int}
-                            .href=${`https://www.home-assistant.io/components/${int.package}/`}
+                            .href=${`https://www.home-assistant.io/integrations/${int.package}/`}
                           ></kb-display-version>
                         </li>
                       `
