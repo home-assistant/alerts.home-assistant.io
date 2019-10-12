@@ -10,14 +10,8 @@
 /*.js
   Cache-Control: public, max-age: 604800, s-maxage=604800
 
-/alerts/*
-  Cache-Control: public, max-age: 1800, s-maxage=1800
-
 /alerts.json
-  Cache-Control: public, max-age: 1800, s-maxage=1800
-
-/feed.xml
-  Cache-Control: public, max-age: 1800, s-maxage=1800
+  Cache-Control: public, max-age: 3600, s-maxage=3600
 
 /ce-alert-link.js
-  Cache-Control: public, max-age: 1800, s-maxage=1800
+  Cache-Control: public, max-age: 3600, s-maxage=3600
