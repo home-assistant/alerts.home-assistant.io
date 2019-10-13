@@ -1,0 +1,17 @@
+/*
+  Cache-Control: public, max-age: 0, s-maxage=900, must-revalidate
+  Content-Security-Policy: form-action https:
+  Feature-Policy: vibrate 'none'; geolocation 'none'; midi 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; payment 'none'
+  Referrer-Policy: no-referrer-when-downgrade
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/*.js
+  Cache-Control: public, max-age: 604800, s-maxage=604800
+
+/alerts.json
+  Cache-Control: public, max-age: 3600, s-maxage=3600
+
+/ce-alert-link.js
+  Cache-Control: public, max-age: 3600, s-maxage=3600

@@ -81,7 +81,7 @@ gulp.task("create-feeds", done => {
     version: "https://jsonfeed.org/version/1",
     title: "Home Assistant - Alerts",
     home_page_url: "https://alerts.home-assistant.io",
-    feed_url: "https://alerts.home-assistant.io/feed.json",
+    feed_url: "https://alerts.home-assistant.io/feed.xml",
     description: "Alerts for breaking integrations of Home Assistant.",
     icon: "https://alerts.home-assistant.io/images/favicon.png"
   };
@@ -106,7 +106,6 @@ gulp.task("create-feeds", done => {
       )
     };
   });
-  fs.writeFileSync(`${buildDir}/feed.json`, JSON.stringify(jsonfeed));
   fs.writeFileSync(`${buildDir}/feed.xml`, jsonfeedToAtom(jsonfeed));
   done();
 });
