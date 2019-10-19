@@ -16,4 +16,4 @@ As a temporary workaround, downgrading to a previous AdGuard version solves the 
 
 # Fix
 
-A change making the integration compatible with the Home Assistant integration again is in progress.
+The Adguard Home integration provided by Home Assistant 0.101.0, will address this isssue.
