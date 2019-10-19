@@ -5,7 +5,7 @@ updated: 2019-10-19 09:00:00
 integrations:
   - adguard
 github_issue: https://github.com/home-assistant/home-assistant/issues/27918
-homeassistant: ">0.95"
+homeassistant: ">0.95 <0.102"
 ---
 
 AdGuard Home v0.99.0 introduced backward breaking API changes, causing the integration not to work as expected.
