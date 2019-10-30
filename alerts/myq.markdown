@@ -12,9 +12,7 @@ MyQ has changed something in their private API, which has broken the integration
 
 # Workaround
 
-The current workaround is to edit the copy of pymyq being used by Home Assistant and
-remove the `User Agent` header from all API calls. Commentary on how to do this for
-various architectures can be found here: https://github.com/arraylabs/pymyq/issues/27
+The current workaround is to edit the copy of pymyq being used by Home Assistant and remove the `User Agent` header from all API calls. Commentary on how to do this for various architectures can be found here: https://github.com/arraylabs/pymyq/issues/27
 
 # Fix
 
