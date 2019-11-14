@@ -14,4 +14,4 @@ A fix is currently being worked on but requires an update to the library. As soo
 Please see the related Github issue to track progress.
 
 ## Work around
-A work around can be found here: https://community.home-assistant.io/t/lovelace-postnl/112433/209
+A work around can be found here: https://community.home-assistant.io/t/lovelace-postnl/112433/218
