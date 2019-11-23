@@ -1,17 +1,16 @@
 ---
 title: "PostNL integration no longer works"
-created: 2019-11-08 12:00:00
+created: 2019-11-20 12:00:00
 integrations:
   - postnl
-github_issue: https://github.com/home-assistant/home-assistant/issues/28726
+github_issue: https://github.com/home-assistant/home-assistant/issues/29002
 homeassistant: ">0.0"
 ---
 
-PostNL has changed their authentication API to now require an User-Agent.
+PostNL has changed their API which now breaks this component.
 
 ## Fix
-A fix is currently being worked on but requires an update to the library. As soon as the library is updated, the component in HA can be updated.
-Please see the related Github issue to track progress.
+As PostNL seems to have hardened their API, it's not clear yet if this can be solved. Please see the related Github issue to track progress.
 
 ## Work around
-A work around can be found here: https://community.home-assistant.io/t/lovelace-postnl/112433/218
+No work around is present currently.
