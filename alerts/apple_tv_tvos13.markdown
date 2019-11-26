@@ -1,7 +1,7 @@
 ---
 title: "Apple TV integration incompatible with tvOS 13"
 created: 2019-09-07 18:20:03
-updated: 2019-10-08 17:15:10
+updated: 2019-11-25 19:35:10
 integrations:
   - apple_tv
 github_issue: https://github.com/postlund/pyatv/issues/180
@@ -15,4 +15,4 @@ The current version of the integration relies on the legacy DAAP-protocol which 
 If you wish to continue using the Apple TV media player integration in Home Assistant, it's recommended to hold off on installing tvOS 13 at this time. On your Apple TV device, navigate to Settings > System > Software Updates and turn off auto updates.
 
 ## Update
-Thanks to the efforts of Pierre Ståhl, the pyatv library has been updated to 0.4.0 with compatibility fixes for tvOS 13. However, the current Home Assistant integration must be rewritten in order to support the extensive changes. A task list has been posted on the pyatv GitHub repo and [help is wanted](https://github.com/postlund/pyatv/issues/209).
+Thanks to Pierre Ståhl, the Apple TV integration for Home Assistant is in the process of being completely rewritten and modernized. An initial beta version has been [released as a custom integration](https://github.com/postlund/hass-atv-beta) in order to gather feedback and bug reports. After the testing period concludes the changes will be integrated back into Home Assistant.
