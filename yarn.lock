@@ -533,6 +533,11 @@ commander@^2.20.0, commander@^2.9.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
 
+commondir@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
+  integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
+
 component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
@@ -920,6 +925,15 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
+find-cache-dir@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-3.1.0.tgz#9935894999debef4cf9f677fdf646d002c4cdecb"
+  integrity sha512-zw+EFiNBNPgI2NTrKkDd1xd7q0cs6wr/iWnr/oUkI0yF9K9GqQ+riIt4aiyFaaqpaWbxPrJXHI+QvmNUQbX+0Q==
+  dependencies:
+    commondir "^1.0.1"
+    make-dir "^3.0.0"
+    pkg-dir "^4.1.0"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
@@ -927,6 +941,14 @@ find-up@^1.0.0:
   dependencies:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
+
+find-up@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
+  integrity sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
+  dependencies:
+    locate-path "^5.0.0"
+    path-exists "^4.0.0"
 
 findup-sync@^2.0.0:
   version "2.0.0"
@@ -1630,6 +1652,13 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
+locate-path@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
+  integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
+  dependencies:
+    p-locate "^4.1.0"
+
 lru-cache@^4.0.1:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
@@ -1644,6 +1673,13 @@ magic-string@^0.25.2:
   integrity sha512-6QK0OpF/phMz0Q2AxILkX2mFhi7m+WMwTRg0LQKq/WBB0cDP4rYH3Wp4/d3OTXlrPLVJT/RFqj8tFeAR4nk8AA==
   dependencies:
     sourcemap-codec "^1.4.4"
+
+make-dir@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.0.0.tgz#1b5f39f6b9270ed33f9f054c5c0f84304989f801"
+  integrity sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
+  dependencies:
+    semver "^6.0.0"
 
 make-iterator@^1.0.0:
   version "1.0.1"
@@ -2041,6 +2077,25 @@ p-finally@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
   integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
 
+p-limit@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.1.tgz#aa07a788cc3151c939b5131f63570f0dd2009537"
+  integrity sha512-85Tk+90UCVWvbDavCLKPOLC9vvY8OwEX/RtKF+/1OADJMVlFfEHOiMTPVyxg7mk/dKa+ipdHm0OUkTvCpMTuwg==
+  dependencies:
+    p-try "^2.0.0"
+
+p-locate@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
+  integrity sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
+  dependencies:
+    p-limit "^2.2.0"
+
+p-try@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
+  integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
 parse-filepath@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/parse-filepath/-/parse-filepath-1.0.2.tgz#a632127f53aaf3d15876f5872f3ffac763d6c891"
@@ -2083,6 +2138,11 @@ path-exists@^2.0.0:
   integrity sha1-D+tsZPD8UY2adU3V77YscCJ2H0s=
   dependencies:
     pinkie-promise "^2.0.0"
+
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
@@ -2146,6 +2206,13 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
+
+pkg-dir@^4.1.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-4.2.0.tgz#f099133df7ede422e81d1d8448270eeb3e4261f3"
+  integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
+  dependencies:
+    find-up "^4.0.0"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -2364,14 +2431,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.1.tgz#ea10d8110376982fef578df8fc30b9ac30a07a3e"
-  integrity sha512-vIpgF6wfuJOZI7KKKSP+HmiKggadPQAdsp5HiC1mvqnfp0gF1vdwgBWZIdrVft9pgqoMFQN+R7BSWZiBxx+BBw==
-  dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.11.1, resolve@^1.4.0:
+resolve@1.12.0, resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.11.1, resolve@^1.4.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.12.0.tgz#3fc644a35c84a48554609ff26ec52b66fa577df6"
   integrity sha512-B/dOmuoAik5bKcD6s6nXDCjzUKnaDvdkRyAk6rsmsKLipWj4797iothd7jmmUhWTfinVMU+wc56rYKsit2Qy4w==
@@ -2428,13 +2488,14 @@ rollup-plugin-terser@^5.1.1:
     serialize-javascript "^1.7.0"
     terser "^4.1.0"
 
-rollup-plugin-typescript2@^0.22.1:
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.22.1.tgz#7678b7decc6808e600ff36c32febd31081b55405"
-  integrity sha512-SQEHr1s0kDWrNV3UKySZtYKFIcWCJh2PQ4ZtLNj18pf50SrxeRDlUksOOeLPyodJ7bVLaKwWDbiobF2a6gfKyg==
+rollup-plugin-typescript2@^0.24.3:
+  version "0.24.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.24.3.tgz#276fa33a9d584d500da62d3e5400307f4a46bdf2"
+  integrity sha512-D7yovQlhnRoz7pG/RF0ni+koxgzEShwfAGuOq6OVqKzcATHOvmUt2ePeYVdc9N0adcW1PcTzklUEM0oNWE/POw==
   dependencies:
+    find-cache-dir "^3.0.0"
     fs-extra "8.1.0"
-    resolve "1.11.1"
+    resolve "1.12.0"
     rollup-pluginutils "2.8.1"
     tslib "1.10.0"
 
@@ -2492,6 +2553,11 @@ semver-greatest-satisfied-range@^1.1.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
+
+semver@^6.0.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
+  integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
 serialize-javascript@^1.7.0:
   version "1.7.0"
