@@ -23,7 +23,7 @@
     "rollup-plugin-terser": "^5.1.1",
     "rollup-plugin-typescript2": "^0.22.1",
     "serve": "^11.1.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.3"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
