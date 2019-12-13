@@ -146,12 +146,7 @@ class KbDetail extends LitElement {
         content.innerHTML = filterXSS(
           marked(
             // Strip out the metadata
-            text.substr(text.indexOf("---", 1) + 4),
-            {
-              breaks: true,
-              gfm: true,
-              tables: true
-            }
+            text.substr(text.indexOf("---", 1) + 4)
           )
         );
         this._content = content;
