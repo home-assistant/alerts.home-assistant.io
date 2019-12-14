@@ -4,7 +4,7 @@ created: 2019-08-29 18:20:03
 integrations:
   - zwave
 github_issue: https://github.com/home-assistant/home-assistant/issues/26270
-homeassistant: ""
+homeassistant: ">0.0"
 ---
 
 There's a [known incompatibility](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=245031#p1502030) between the Aeotec
