@@ -8,5 +8,4 @@ homeassistant: ""
 ---
 
 HERE have changed their API and deprecated the APP CODE option that the HerePy package uses. 
-This means that new users of the integration can't set up the integration. An issue has been
-opened against the HerePy package.
+This means that new users of the integration can't set up the integration. An issue has been opened against the HerePy package.
