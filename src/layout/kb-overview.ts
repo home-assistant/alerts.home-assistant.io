@@ -4,7 +4,7 @@ import {
   html,
   property,
   css,
-  CSSResult
+  CSSResult,
 } from "lit-element";
 import { Alert } from "../data/alert";
 import "./kb-layout";
@@ -25,7 +25,7 @@ class KbOverview extends LitElement {
           ? html`
               <div class="alerts">
                 ${this.alerts.map(
-                  kb => html`
+                  (kb) => html`
                     <a href=${`#${kb.filename}`}>
                       <ha-card .header=${kb.title}>
                         <div class="card-content">
@@ -34,17 +34,19 @@ class KbOverview extends LitElement {
                           </span>
                           ${kb.integrations
                             ? kb.integrations.map(
-                                int =>
+                                (int) =>
                                   html`
                                     <span class="integration"
-                                      >${int.package.toUpperCase()}</span
-                                    >
+                                      >${int.package.toUpperCase()}
+                                      <img
+                                        src="https://brands.home-assistant.io/${int.package}/icon.png"
+                                    /></span>
                                   `
                               )
                             : ""}
                           ${kb.packages
                             ? kb.packages.map(
-                                pkg =>
+                                (pkg) =>
                                   html`
                                     <span class="package"
                                       >${pkg.package.toUpperCase()}</span
@@ -107,6 +109,12 @@ class KbOverview extends LitElement {
         font-size: 12px;
         font-weight: 500;
         margin: 0 2px;
+      }
+
+      .integration img {
+        height: 1em;
+        width: 1em;
+        vertical-align: middle;
       }
 
       .integration {

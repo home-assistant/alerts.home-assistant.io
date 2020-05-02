@@ -4,7 +4,7 @@ import {
   property,
   html,
   CSSResult,
-  css
+  css,
 } from "lit-element";
 import { Alert } from "../data/alert";
 import "./kb-layout";
@@ -79,15 +79,18 @@ class KbDetail extends LitElement {
           ${this.alert.integrations
             ? html`
                 <b>Integrations</b>
-                <ul>
+                <ul class="integrations">
                   ${this.alert.integrations.map(
-                    int =>
+                    (int) =>
                       html`
                         <li>
                           <kb-display-version
                             .version=${int}
                             .href=${`https://www.home-assistant.io/integrations/${int.package}/`}
                           ></kb-display-version>
+                          <img
+                            src="https://brands.home-assistant.io/${int.package}/icon.png"
+                          />
                         </li>
                       `
                   )}
@@ -99,7 +102,7 @@ class KbDetail extends LitElement {
                 <b>Python Packages</b>
                 <ul>
                   ${this.alert.packages.map(
-                    pkg =>
+                    (pkg) =>
                       html`
                         <li>
                           <kb-display-version
@@ -138,8 +141,8 @@ class KbDetail extends LitElement {
     }
 
     Promise.all([
-      fetch(`/alerts/${this.alert!.filename}`).then(resp => resp.text()),
-      import("../util/load_markdown")
+      fetch(`/alerts/${this.alert!.filename}`).then((resp) => resp.text()),
+      import("../util/load_markdown"),
     ])
       .then(([text, { marked, filterXSS }]) => {
         const content = document.createElement("div");
@@ -151,7 +154,7 @@ class KbDetail extends LitElement {
         );
         this._content = content;
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
         this._error = `Error loading content: ${err.message}`;
       });
@@ -173,8 +176,15 @@ class KbDetail extends LitElement {
         padding: 16px;
       }
 
+      .content a,
       .sidebar a {
         color: var(--dark-primary-color);
+      }
+
+      .integrations img {
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
       }
 
       @media (min-width: 768px) {
