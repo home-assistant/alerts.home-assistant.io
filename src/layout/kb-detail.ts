@@ -176,6 +176,7 @@ class KbDetail extends LitElement {
         padding: 16px;
       }
 
+      .content a,
       .sidebar a {
         color: var(--dark-primary-color);
       }
