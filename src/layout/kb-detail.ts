@@ -61,9 +61,7 @@ class KbDetail extends LitElement {
         <div class="sidebar">
           Created: ${this.alert.created.toLocaleDateString()}<br />
           ${this.alert.updated
-            ? html`
-                Updated: ${this.alert.updated.toLocaleDateString()}<br />
-              `
+            ? html` Updated: ${this.alert.updated.toLocaleDateString()}<br /> `
             : ""}
           <br />
           <b>Home Assistant:</b>
@@ -90,6 +88,7 @@ class KbDetail extends LitElement {
                           ></kb-display-version>
                           <img
                             src="https://brands.home-assistant.io/${int.package}/icon.png"
+                            onerror="this.style.display='none'"
                           />
                         </li>
                       `
