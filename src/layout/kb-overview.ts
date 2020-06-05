@@ -40,6 +40,7 @@ class KbOverview extends LitElement {
                                       >${int.package.toUpperCase()}
                                       <img
                                         src="https://brands.home-assistant.io/${int.package}/icon.png"
+                                        onerror="this.style.display='none'"
                                     /></span>
                                   `
                               )
