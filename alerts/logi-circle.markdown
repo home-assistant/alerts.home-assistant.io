@@ -1,6 +1,6 @@
 ---
 title: "Logi Circle Temporarily Suspends API Applications"
-created: 2020-06-007 19:30:00
+created: 2020-06-07 19:30:00
 integrations:
   - logi_circle
 github_issue: https://github.com/home-assistant/core/issues/36521
