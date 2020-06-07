@@ -7,4 +7,4 @@ github_issue: https://github.com/home-assistant/core/issues/36521
 homeassistant: ">0.60.0"
 ---
 
-Due to the ongoing situation with COVID-19, Logitech have temporarily stopped processing applications for new API accounts. Existing accounts should continue to work.
+Due to the ongoing situation with COVID-19, Logitech has temporarily stopped processing applications for new API accounts. Existing accounts should continue to work.
