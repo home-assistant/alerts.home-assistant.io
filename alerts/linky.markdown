@@ -1,5 +1,5 @@
 ---
-title: "API changes from march 2020 make some users impossible to authenticate"
+title: "Linky API changes from preventing authentication"
 created: 2020-07-13 10:40:00
 integrations:
   - linky
