@@ -7,4 +7,4 @@ github_issue: https://github.com/home-assistant/core/issues/33634
 homeassistant: ">0.79.0"
 ---
 
-An automatic Enedis API changes from march 2020 make some users impossible to authenticate, a fix is in work in progress, see details on the GitHub issue.
+An automatic Enedis API changes from March 2020 makes it impossible for some users to authenticate. A fix is in work in progress, see details on the GitHub issue.
