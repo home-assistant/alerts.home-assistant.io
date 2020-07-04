@@ -5,7 +5,7 @@ updated: 2020-07-03 12:00:00
 integrations:
   - tahoma
 github_issue: https://github.com/home-assistant/core/issues/37291
-homeassistant: ">0.49"
+homeassistant: ">0.59"
 ---
 
 Updating your Somfy TaHoma bridge 2020.3.4-12 will cause the Tahoma integration for Home Assistant to no longer work.
