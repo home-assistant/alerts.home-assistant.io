@@ -16,3 +16,10 @@ Connect a USB 2.0 hub to the Pi, and the stick into the hub.
 
 Alternatively migrate to using another brand of Z-Wave stick. That would require removing all the devices from the current stick,
 and then including them with the new stick.
+
+## Update
+
+Aeotec has released a new version of the ZStick Gen 5 that does work directly connected to the Raspberry Pi 4 USB2/3 ports. Details can be found here: https://community.home-assistant.io/t/new-aeotec-z-stick-now-available-fixes-rpi-4-direct-usb-connect-issues/214186
+which includes a link to purchase the New stick directly. It will take some time for the old sticks to be depleted from retailers.
+
+Also, Aeotecs backup tool can be used to backup and flash the new stick for easy replacement.
