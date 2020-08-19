@@ -1,5 +1,5 @@
 ---
-title: Coinmarketcap public API deprecated"
+title: Coinmarketcap public API deprecated
 created: 2020-08-19T06:56:00+02:00
 integrations:
   - coinmarketcap
