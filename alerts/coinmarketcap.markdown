@@ -11,4 +11,4 @@ Since March 5th Coinmarketcap deprecated their legacy Public API in favor of the
 This breaks the current Coinmarketcap integration which still seems to rely on this legacy API for it's data. 
 More details can be found [here](https://pro.coinmarketcap.com/migrate).
 
-Coinmarketcap moving towards the Professional API seems like it is no longer Publicly available but they actually have a Basic tier for their new API that allows for personal use and is actually suited for new HA data binding.
+Coinmarketcap moving towards the Professional API seems like it is no longer Publicly available but they actually have a Basic tier for their new API that allows for personal use and is actually suited for a new Home Assistant integration (which currently does not exist yet).
