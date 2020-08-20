@@ -1,7 +1,10 @@
 ---
 title: Coinmarketcap public API deprecated
 created: 2020-08-19T06:56:00+02:00
+updated: 2020-08-20T11:14:00+02:00
 integrations:
+  - coinmarketcap
+packages:
   - coinmarketcap
 github_issue: https://github.com/home-assistant/core/issues/32551
 homeassistant: ">0.106.3"
