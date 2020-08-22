@@ -5,7 +5,7 @@ integrations:
   - frontend
   - ios
 github_issue: https://github.com/home-assistant/frontend/issues/6654
-homeassistant: "All"
+homeassistant: ">0.7"
 ---
 
 We are aware of a bug in the latest betas from Apple which prohibits use of controls or buttons in the Home Assistant frontend. Affected betas are iOS 14 beta 5 (18A5351d) and Safari Technology Preview 112 (Safari 14.0, WebKit 15610.1.25.5.1). This issue causes the view to be refreshed when interacting with a control without the control being executed.
