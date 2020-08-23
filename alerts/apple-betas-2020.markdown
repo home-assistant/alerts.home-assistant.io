@@ -4,6 +4,7 @@ created: 2020-08-22 11:00:00
 integrations:
   - frontend
   - ios
+  - mobile_app
 github_issue: https://github.com/home-assistant/frontend/issues/6654
 homeassistant: ">0.7"
 ---
