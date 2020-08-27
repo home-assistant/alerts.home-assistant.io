@@ -17,4 +17,4 @@ Due to the way iOS works, this will affect all browsers (and our Companion App) 
 
 For those wishing to follow this we suggest you follow the active issues on our [frontend](https://github.com/home-assistant/frontend/issues/6654) and [iOS app](https://github.com/home-assistant/iOS/issues/925) repositories and also the [Webkit Bugzilla report](https://bugs.webkit.org/show_bug.cgi?id=215622).
 
-**Update 2020-08-26**: The underlying issue in WebKit has been resolved. This is included in iOS 14 beta 6 (18A5357e) which has now been released as a public beta. This alert will be closed when we confirm the next macOS Big Sur beta and Safari Technology Preview build also contains the fix.
+**Update 2020-08-26**: The underlying issue in WebKit has been resolved. This fix is included in iOS 14 beta 6 (18A5357e) which has now been released as a public beta. This alert will be closed when we confirm the next macOS Big Sur beta and Safari Technology Preview build also contains the fix.
