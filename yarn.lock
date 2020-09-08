@@ -1503,13 +1503,13 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-jsonfeed-to-atom@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/jsonfeed-to-atom/-/jsonfeed-to-atom-1.1.4.tgz#38dcb1d7bb65ad662ca38360d7f9206c0795b155"
-  integrity sha512-wd8R2Dl1LsEd03t5aayhFt+eidL0BPa/JsMM0qJ0qzdIEGHqJQz2NmLu0cRZawRM4GeljTbl5z/+EKQPIAlHdA==
+jsonfeed-to-atom@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/jsonfeed-to-atom/-/jsonfeed-to-atom-1.2.2.tgz#e9d62d507e653b5d93a884ca1c0d1d77b8137f04"
+  integrity sha512-VheftU1yAw1QOR54/kqtlAByWdC76dymjVs8xNYumJmkkYjqoXHILq7pX2IbISc7YhHv+peUoDbnXA6mScaYOA==
   dependencies:
     striptags "^3.1.1"
-    xmlbuilder "^14.0.0"
+    xmlbuilder "^15.1.1"
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -2984,10 +2984,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-xmlbuilder@^14.0.0:
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-14.0.0.tgz#876b5aec4f05ffd5feb97b0a871c855d16fbeb8c"
-  integrity sha512-ts+B2rSe4fIckR6iquDjsKbQFK2NlUk6iG5nf14mDEyldgoc2nEKZ3jZWMPTxGQwVgToSjt6VGIho1H8/fNFTg==
+xmlbuilder@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
+  integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
 
 xss@^1.0.8:
   version "1.0.8"
