@@ -1,6 +1,6 @@
 ---
 title: "Loop Energy v1 shutting down"
-created: 2020-10-21T20:25+02:00
+created: 2020-10-21T20:25:00+02:00
 integrations:
   - loopenergy
 github_issue: https://github.com/home-assistant/home-assistant.io/issues/15345
