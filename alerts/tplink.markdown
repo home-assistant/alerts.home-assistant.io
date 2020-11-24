@@ -12,4 +12,6 @@ TP-Link's latest firmware for Kasa Smart Home devices closes the port (9999) pre
 
 ## Update 2020/11/23
 
-TP-Link are offering Home Assistant users a custom version of the latest firmware that will allow the local API to continue to work. You will need to raise a support ticket with TP-Link and provide the MAC address of your switch(es). Please see the [our blog post](https://www.home-assistant.io/blog/2020/11/23/tplink-local-access/) for more details. We encourage all affected users to raise a ticket with TP-Link to help them understand the size of their user base using Home Assistant.
+TP-Link is offering Home Assistant users a custom version of the latest firmware that will allow the local API to continue to work. You will need to raise a support ticket with TP-Link and provide the MAC address of your switch(es). Please see [our blog post](https://www.home-assistant.io/blog/2020/11/23/tplink-local-access/) for more details.
+
+We encourage all affected users to raise a ticket with TP-Link to help them understand the size of their user base using Home Assistant.
