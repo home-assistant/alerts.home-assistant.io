@@ -1,5 +1,5 @@
 ---
-title: Tasmota devices stops responding after 25 days uptime
+title: Tasmota devices stop responding after 25 days uptime
 created: 2020-12-05 12:00:00
 integrations:
   - tasmota
