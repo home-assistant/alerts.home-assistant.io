@@ -12,7 +12,7 @@
     "@types/marked": "^1.2.1",
     "@types/memoize-one": "^5.1.2",
     "gulp": "^4.0.2",
-    "js-yaml": "^3.14.0",
+    "js-yaml": "^3.14.1",
     "jsonfeed-to-atom": "^1.2.2",
     "prettier": "^2.2.1",
     "require-dir": "^1.2.0",
