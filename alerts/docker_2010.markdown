@@ -7,7 +7,7 @@ github_issue: https://github.com/home-assistant/supervisor/issues/2359
 homeassistant: ">0.7"
 ---
 
-On December 9, 2020 Docker released version 20.10. This version is curerntly not compatible with the Supervisor that is running on a Supervised installation. If you are running our Home Assistant Operating System or Home Assistant Core directly in Docker, this alert does **not** apply to you.
+On December 9, 2020 Docker released version 20.10. This version is currently not compatible with the Supervisor that is running on a Supervised installation. If you are running our Home Assistant Operating System or Home Assistant Core directly in Docker, this alert does **not** apply to you.
 
 There are 2 parts to this issue. The first is the removal of filtering of images over the API, this results in images not beeing recognized by the Supervisor correctly.
 
