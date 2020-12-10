@@ -15,7 +15,7 @@ The second issue is changes in how the systemd service for Docker works, which r
 
 ## Workaround
 
-The only known workaround at this point is downgrading Docker to the previous version. The examples below are for Debian 10 and Ubuntu 20. If that is not your OS, check the documentation for your OS's package manager on how to perform the downgrade.
+The only known workaround at this point is downgrading Docker to the previous version. The examples below are for Debian 10. If that is not your OS, check the documentation for your OS's package manager on how to perform the downgrade.
 
 **Debian 10**
 ```bash
