@@ -18,7 +18,9 @@ The second issue is changes in how the systemd service for Docker works, which r
 The only known workaround at this point is downgrading Docker to the previous version. The examples given below is for Debian 10 if that is not your OS, check the documentation for your OS's package manager on how to preform the downgrade.
 
 ```bash
-apt install docker-ce=5:19.03.14~3-0~debian-buster docker-ce-cli=5:19.03.14~3-0~debian-buster containerd.io=1.3.9-1
+apt install docker-ce=5:19.03.14~3-0~debian-buster
+apt install docker-ce-cli=5:19.03.14~3-0~debian-buster
+apt install containerd.io=1.3.9-1
 ```
 
 When the downgrade is complete do a system reboot.
