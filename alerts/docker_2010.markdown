@@ -15,7 +15,7 @@ The second issue is changes in how the systemd service for Docker works, which r
 
 ## Workaround
 
-The only known workaround at this point is downgrading Docker to the previous version. The examples below are for Debian 10. If that is not your OS, check the documentation for your OS's package manager on how to perform the downgrade.
+The only known workaround at this point is downgrading Docker to the previous version. The example below is for Debian 10. If that is not your OS, check the documentation for your OS's package manager on how to perform the downgrade.
 
 ```bash
 apt install docker-ce=5:19.03.14~3-0~debian-buster
