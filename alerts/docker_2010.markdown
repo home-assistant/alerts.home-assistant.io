@@ -7,7 +7,7 @@ github_issue: https://github.com/home-assistant/supervisor/issues/2359
 homeassistant: ">0.7"
 ---
 
-On December 9, 2020 Docker released version 20.10. This version is curerntly not compatible with the Supervisor that is running on a Supervised installation. If you are running our Home Assistant Operating System or Home Assistant Core directly in Docker this alert does **not** apply to you.
+On December 9, 2020 Docker released version 20.10. This version is curerntly not compatible with the Supervisor that is running on a Supervised installation. If you are running our Home Assistant Operating System or Home Assistant Core directly in Docker, this alert does **not** apply to you.
 
 There are 2 parts to this issue. The first is the removal of filerting of images over the API, this results in images not beeing recognivced by the Supervisor correctly.
 
@@ -23,4 +23,4 @@ apt install docker-ce-cli=5:19.03.14~3-0~debian-buster
 apt install containerd.io=1.3.9-1
 ```
 
-When the downgrade is complete do a system reboot.
+When the downgrade is complete do a system reboot, once it has fully started you need to run `ha supervisor repair` and `ha supervisor restart` to fix problems with add-ons.
