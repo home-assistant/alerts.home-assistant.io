@@ -23,11 +23,4 @@ apt install docker-ce-cli=5:19.03.14~3-0~debian-buster
 apt install containerd.io=1.3.9-1
 ```
 
-**Ubuntu 20**
-```bash
-apt install docker-ce=5:19.03.14~3-0~ubuntu-focal
-apt install docker-ce-cli=5:19.03.14~3-0~ubuntu-focal
-apt install containerd.io=1.3.9-1
-```
-
 When the downgrade is complete, do a system reboot. Once it has fully started you need to run `ha supervisor repair` and `ha supervisor restart` to fix problems with add-ons.
