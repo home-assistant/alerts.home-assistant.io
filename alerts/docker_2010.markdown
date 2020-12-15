@@ -24,3 +24,20 @@ apt install containerd.io=1.3.9-1
 ```
 
 When the downgrade is complete, do a system reboot. Once it has fully started you need to run `ha supervisor repair` and `ha supervisor restart` to fix problems with add-ons.
+
+
+## Update December 15, 2020
+
+Today docker has released version 20.10.1. This version fixes the issues with systemd, and startup of the `hassio-supervisor` service.
+
+We have published version 2020.12.7 of our Supervisor to the beta channel. This version fixes the remainding filtering issue.
+
+If you want to help test out this you can do that by joining the beta channel in the UI on the "System" tab in the Supervisor panel, or with CLI:
+
+```bash
+ha supervisor options --channel beta
+ha supervisor reload
+ha supervisor update
+```
+
+When you have version 2020.12.7 of the Supervisor running you can update Docker to 20.10.1
