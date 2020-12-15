@@ -30,9 +30,9 @@ When the downgrade is complete, do a system reboot. Once it has fully started yo
 
 Today docker has released version 20.10.1. This version fixes the issues with systemd, and startup of the `hassio-supervisor` service.
 
-We have published version 2020.12.7 of our Supervisor to the beta channel. This version fixes the remainding filtering issue.
+We have published version 2020.12.7 of our Supervisor to the beta channel. This version fixes the remaining filtering issue.
 
-If you want to help test out this you can do that by joining the beta channel in the UI on the "System" tab in the Supervisor panel, or with CLI:
+If you want to help test this fix you can do that by joining the beta channel in the UI on the "System" tab in the Supervisor panel, or with CLI:
 
 ```bash
 ha supervisor options --channel beta
@@ -40,4 +40,4 @@ ha supervisor reload
 ha supervisor update
 ```
 
-When you have version 2020.12.7 of the Supervisor running you can update Docker to 20.10.1
+When you have version 2020.12.7 of the Supervisor running you can update Docker to 20.10.1.
