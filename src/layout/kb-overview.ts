@@ -66,9 +66,12 @@ class KbOverview extends LitElement {
                   HOME ASSISTANT WEBSITE
                 </a>
                 –
+                <a href="/feed.xml">
+                  ALERTS RSS FEED
+                </a>
+                –
                 <a
                   href="https://github.com/home-assistant/alerts.home-assistant.io/tree/master/alerts"
-                  target="_blank"
                 >
                   PROPOSE AN ALERT
                 </a>
