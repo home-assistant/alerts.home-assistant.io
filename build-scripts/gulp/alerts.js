@@ -105,6 +105,14 @@ gulp.task("create-feeds", done => {
         )
       )
     };
+  }).sort( (a, b) => {
+    if (a.date_published > b.date_published){
+      return -1;
+    }
+    if (a.date_published < b.date_published){
+      return 1;
+    }
+    return 0;
   });
   fs.writeFileSync(`${buildDir}/feed.xml`, jsonfeedToAtom(jsonfeed));
   done();
