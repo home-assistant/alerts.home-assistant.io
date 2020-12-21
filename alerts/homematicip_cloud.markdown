@@ -16,15 +16,14 @@ The same issue has also been reported for other smart home platforms, like ioBro
 
 The Homematic IP Cloud Integration is based on the cloud push principle, by which status updates are transmitted from the cloud to the local installation as an event, so this should not be the problem.
 
-Reducing calls to the cloud might help not to be blocked.
-The following activities in Home-Assistant make calls to the cloud (not complete):
-- switch/dim light or power plug
-- set target temperature or the active profile on a thermostat
-- activate Eco/Vacation Mode
-- activate/deactivate alarm
+Reducing calls to the cloud might help not to be blocked. The following activities in Home Assistant make calls to the cloud (not complete):
+
+- Switch/dim light or power plug
+- Set target temperature or the active profile on a thermostat
+- Activate Eco/Vacation mode
+- Activate/deactivate alarm
 
 ## Alternate Integration
 
 The [Homematic Integration](https://www.home-assistant.io/integrations/homematic/), which uses a local CCU or RaspberryMatic, is the recommended alternative that doesn’t require the Homematic IP Cloud.
-
 
