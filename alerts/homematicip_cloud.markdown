@@ -8,7 +8,7 @@ packages:
 homeassistant: ">0.7"
 ---
 
-Since Dec 1, 2020 HomematicIP (EQ-3) has started to **block public IP addresses** of Home Assistant installations if they access the Homematic IP Cloud **too often**. In this case, the Homematic IP Cloud can only be reached from a cellular network. 
+Since Dec 1, 2020, HomematicIP (EQ-3) has started to **block public IP addresses** of Home Assistant installations, if they access the Homematic IP Cloud **too often**. In this case, the Homematic IP Cloud can only be reached from a cellular network.
 Further plans to completely block the non-partner apps from the Homematic IP Cloud cannot be ruled out.
 
 Official partners such as Mediola and Smartha are still permitted.
