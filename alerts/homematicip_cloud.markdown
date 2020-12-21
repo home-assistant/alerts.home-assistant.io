@@ -23,7 +23,6 @@ Reducing calls to the cloud might help not to be blocked. The following activiti
 - Activate Eco/Vacation mode
 - Activate/deactivate alarm
 
-## Alternate Integration
+## Alternative Integration
 
 The [Homematic Integration](https://www.home-assistant.io/integrations/homematic/), which uses a local CCU or RaspberryMatic, is the recommended alternative that doesn’t require the Homematic IP Cloud.
-
