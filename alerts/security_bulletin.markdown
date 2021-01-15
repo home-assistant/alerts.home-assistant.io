@@ -1,6 +1,6 @@
 ---
 title: Security Bulletin
-created: 2021-01-14
+created: 2021-01-14 12:00:00
 integrations: homeassistant
 homeassistant: "<2021.1.2"
 ---
