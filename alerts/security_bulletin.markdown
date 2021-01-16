@@ -18,6 +18,6 @@ If you don’t have the Supervisor menu item, follow the [update instructions](h
 
 **If you cannot update Home Assistant at this time, we strongly advise you to disable all custom integrations.** You can disable your custom integrations by renaming the `custom_components` folder inside your Home Assistant configuration folder to something else. Please be sure to restart Home Assistant after you’ve renamed it.
 
-If you need additional help with upgrading, we are happy to help you out on our [Discord chat](/join-chat/) server.
+If you need additional help with upgrading, we are happy to help you out on our [Discord chat](https://www.home-assistant.io/join-chat/) server.
 
 Paulus
