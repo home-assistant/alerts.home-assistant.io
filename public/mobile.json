@@ -13,6 +13,7 @@
       "max": "2021.1.2"
     },
     "id": "df403817-8fd1-4b72-bb1c-6914cde7d5a5",
+    "admin_only": true,
     "date": "2021-01-16T22:52:02Z",
     "url": "https://www.home-assistant.io/blog/2021/01/14/security-bulletin/",
     "message": "Your version of Home Assistant does not protect for recently discovered security vulnerabilities in custom components. Please view the details and update as soon as possible."
@@ -31,6 +32,7 @@
       "max": "2021.1.4"
     },
     "id": "b5a99018-5da3-11eb-ae93-0242ac130002",
+    "admin_only": true,
     "date": "2021-01-23T17:52:02Z",
     "url": "https://www.home-assistant.io/latest-security-alert",
     "message": "Your version of Home Assistant does not protect for a recently discovered second security vulnerability in custom components. Please view the details and update as soon as possible."
