@@ -1,5 +1,5 @@
 {
-  "name": "alerts.home-assistant.io",
+  "name": "alerts.home-assistant.io-useless edit to trigger recreate",
   "version": "1.0.0",
   "description": "",
   "main": "src/entrypoint.ts",
