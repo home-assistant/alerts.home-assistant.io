@@ -3,7 +3,7 @@ title: "Tesla Integration Fails to Retreive Data"
 created: 2021-04-27 12:54:00
 integrations:
   - tesla
-homeassistant: "2021.4.5"
+homeassistant: ">2021.4.5"
 ---
 
 
