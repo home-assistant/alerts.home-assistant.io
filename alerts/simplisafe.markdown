@@ -2,8 +2,8 @@
 title: "SimpliSafe cloud API experiencing sporadic impact"
 created: 2021-04-28 18:00:00
 integrations:
-  - yeelight
-homeassistant: ">2021.4.0"
+  - simplisafe
+homeassistant: ">0.81"
 ---
 
 ## Summary
