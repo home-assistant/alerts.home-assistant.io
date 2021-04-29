@@ -14,4 +14,4 @@ For some months, the unpublished SimpliSafe cloud API has been experencing spora
 * Re-authentication of the SimpliSafe integration in Home Assistant
 * Missing or delayed `SIMPLISAFE_EVENT` and `SIMPLISAFE_NOTIFICATION` events
 
-Although we are making the integration as resilient as possible, these issues are arising from within the SimpliSafe cloud itself, meaning we have a limited ability to fix these issues directly. We are continuing to monitor the situation.
+Although we are making the integration as resilient as possible, these issues are arising from within the SimpliSafe cloud itself, meaning we have a limited ability to fix these issues directly. We are continuing to monitor the situation and will make every effort to improve the integration where possible.
