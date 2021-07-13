@@ -1,6 +1,6 @@
 ---
 title: "Nello API outage"
-created: 2020-07-13 12:08:33
+created: 2021-07-13 12:08:33
 github_issue: https://github.com/LFE89/nello_one_without_cloud/issues/1
 integrations:
   - nello
