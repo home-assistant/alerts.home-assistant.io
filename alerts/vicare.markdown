@@ -1,6 +1,6 @@
 ---
 title: "ViCare API shut down"
-created: 2020-07-15 14:40:00
+created: 2021-07-15 14:40:00
 integrations:
   - vicare
 github_issue: https://github.com/home-assistant/core/issues/51960
