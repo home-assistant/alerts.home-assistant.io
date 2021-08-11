@@ -4,7 +4,7 @@ created: 2021-08-11 13:27:00
 integrations:
   - ambee
 github_issue: 
-homeassistant: ">0.30"
+homeassistant: ">2021.7.0"
 ---
 
 Ambee have changed their terms of service for their free API accounts. They now have a 15 day limit for new and existing users. 
