@@ -1,5 +1,5 @@
 ---
-title: "Ambee API terms of servcie changed"
+title: "Ambee API terms of service changed"
 created: 2021-08-11 13:27:00
 integrations:
   - ambee
