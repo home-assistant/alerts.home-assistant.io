@@ -12,5 +12,7 @@ BMW has shut down the old API (`Connected Drive app`) to force people to migrate
 Work is underway to migrate to the new API but this has not been finished yet 
 (see [bimmerconnected/bimmer_connected#299](https://github.com/bimmerconnected/bimmer_connected/discussions/299)).
 
-Starting with Home Assistant `2021.8.5`, the `rest_of_world` and `north_america` regions have been restored.
-Work on the `china` region is still in progress.
+## Updates
+| HA version | `rest_of_world` | `north_america` | `china` |
+|------------|-----------------|-----------------|---------|
+| `>=2021.8.5` | sensors are working again, remote services still broken | sensors are working again, remote services still broken | currently not available |
