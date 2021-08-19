@@ -14,16 +14,7 @@ Work is underway to migrate to the new API but this has not been finished yet
 
 Please the the following table on what is working (based on your reports):
 
-### Status with new Home Assistant versions
-#### `>=2021.8.8`
-* `rest_of_world` & `north_america`: ✔
-* `china`: ❌
-
-#### `>=2021.8.5`
-* `rest_of_world` & `north_america`: sensors ✔, remote services ❌
-* `china`: ❌
-
-#### `<2021.8.4`
-* `rest_of_world` & `north_america`: ❌
-* `china`: ✔
-
+### Current status
+* `rest_of_world`: sensors and remote services working with `>=2021.8.8` 
+* `north_america`: sensors and remote services working with `>=2021.8.8`
+* `china`: only working until `<=2021.8.4`
