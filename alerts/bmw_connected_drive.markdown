@@ -18,5 +18,5 @@ Please the the following table on what is working (based on your reports):
 | HA version | `rest_of_world` | `north_america` | `china` |
 | :-: | :-: | :-: | :-: |
 | `<2021.8.4` | ❌ | ❌ | ✔ |
-| `>=2021.8.5` | sensors ✔ <br /> remote services ❌ | sensors ✔ <br /> remote services ❌ | ❌ |
+| `>=2021.8.5` | &nbsp;&nbsp;sensors ✔&nbsp;&nbsp; <br /> &nbsp;&nbsp;remote services ❌&nbsp;&nbsp; | &nbsp;&nbsp;sensors ✔&nbsp;&nbsp; <br /> &nbsp;&nbsp;remote services ❌&nbsp;&nbsp; | &nbsp;&nbsp;❌&nbsp;&nbsp; |
 | `>=2021.8.8` | ✔ | ✔ | ❌ |
