@@ -9,4 +9,4 @@ Firefox 88 and higher introduced an issue with strict privacy checking in combin
 
 ## Workaround
 
-Disable strict privacy checking for the Home Assistant app.
+Disable strict privacy checking for your Home Assistant URL.
