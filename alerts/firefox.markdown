@@ -1,6 +1,6 @@
 ---
 title: "Firefox"
-created: 2021-07-15 14:40:00
+created: 2021-09-03 10:00:00
 integrations: []
 github_issue: https://github.com/home-assistant/supervisor/issues/3021
 ---
