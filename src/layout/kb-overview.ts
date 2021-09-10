@@ -10,6 +10,9 @@ import { Alert } from "../data/alert";
 import "./kb-layout";
 import "../components/ha-card";
 
+
+const domainMap = new Map<string, string>([["hassio", "supervisor"]])
+
 @customElement("kb-overview")
 class KbOverview extends LitElement {
   @property() public alerts?: Alert[];
@@ -37,7 +40,7 @@ class KbOverview extends LitElement {
                                 (int) =>
                                   html`
                                     <span class="integration"
-                                      >${int.package.toUpperCase()}
+                                      >${(domainMap.get(int.package) || int.package).toUpperCase()}
                                       <img
                                         src="https://brands.home-assistant.io/${int.package}/icon.png"
                                         onerror="this.style.display='none'"

@@ -1,7 +1,8 @@
 ---
-title: "Firefox"
+title: "Firefox and usage with ingress (for add-ons)"
 created: 2021-09-03 10:00:00
-integrations: []
+integrations: 
+  - hassio
 github_issue: https://github.com/home-assistant/supervisor/issues/3021
 ---
 
