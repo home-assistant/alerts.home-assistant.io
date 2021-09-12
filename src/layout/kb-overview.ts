@@ -11,7 +11,9 @@ import "./kb-layout";
 import "../components/ha-card";
 
 
-const domainMap = new Map<string, string>([["hassio", "supervisor"]])
+const domainNameOverride = {
+  "hassio": "supervisor"
+}
 
 @customElement("kb-overview")
 class KbOverview extends LitElement {
@@ -40,7 +42,7 @@ class KbOverview extends LitElement {
                                 (int) =>
                                   html`
                                     <span class="integration"
-                                      >${(domainMap.get(int.package) || int.package).toUpperCase()}
+                                      >${(domainNameOverride[int.package] || int.package).toUpperCase()}
                                       <img
                                         src="https://brands.home-assistant.io/${int.package}/icon.png"
                                         onerror="this.style.display='none'"
