@@ -12,7 +12,7 @@ BMW has shut down the old API (`Connected Drive app`) to force people to migrate
 Work is underway to migrate to the new API but this has not been finished yet 
 (see [bimmerconnected/bimmer_connected#299](https://github.com/bimmerconnected/bimmer_connected/discussions/299)).
 
-Please the the following table on what is working (based on your reports):
+Please see the following table on what is working (based on your reports):
 
 ### Current status
 * `rest_of_world`: sensors and remote services working with `>=2021.8.8` 
