@@ -5,4 +5,4 @@ integrations:
   - androidtv
 ---
 
-Android TV 11 will not work correctly with Android TV integration. States and running apps cannot be read and the entity alternated between Off, Idle and Standby states only.
+The Android TV integration currently doesn't work correctly with Android TV 11. States and running apps cannot be read and the entity alternates between the Off, Idle and Standby states.
