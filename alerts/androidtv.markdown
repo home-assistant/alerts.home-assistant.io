@@ -8,4 +8,3 @@ github_issue: https://github.com/home-assistant/core/issues/56567
 
 The Android TV integration currently doesn't work correctly with Android TV 11. States and running apps cannot be read and the entity alternates between the Off, Idle and Standby states.
 
-Please see this summary of the [issue](https://github.com/home-assistant/core/issues/56567) for more information. 
