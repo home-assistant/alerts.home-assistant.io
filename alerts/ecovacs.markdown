@@ -8,7 +8,7 @@ github_issue: https://github.com/home-assistant/core/issues/57282
 homeassistant: ">0.77"
 ---
 
-The Ecovacs integration relies on a dependency that is no longer supported by the code maintainer.
+The Ecovacs integration relies on a dependency (sucks: https://github.com/wpietri/sucks) that is no longer supported by the code maintainer.
 
 ## Workaround
 
