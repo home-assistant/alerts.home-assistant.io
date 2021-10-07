@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "lit-element": "^3.0.0",
-    "marked": "^3.0.4",
+    "marked": "^3.0.6",
     "memoize-one": "^5.2.1",
     "xss": "^1.0.9"
   }
