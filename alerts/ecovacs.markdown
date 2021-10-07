@@ -12,6 +12,6 @@ The Ecovacs integration relies on a dependency that is no longer supported by th
 
 ## Workaround
 
-There are replacement custom integrations that can be used as a replacement. The configuration parameters remain the same, but the dependencies are supported under a new project.
+There is a custom integration that can be uinstalled as a drop-in replacement. The configuration parameters remain the same, but the dependencies are supported under a new project.
 
 See custom integration here: https://github.com/Ligio/hacc-ozmo
