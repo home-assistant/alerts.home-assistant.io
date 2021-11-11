@@ -30,18 +30,12 @@ class KbDetail extends LitElement {
 
   private renderBody() {
     if (this.alert === null) {
-      return html`
-        <ha-card>
-          Loading…
-        </ha-card>
-      `;
+      return html` <ha-card> Loading… </ha-card> `;
     }
 
     if (!this.alert) {
       return html`
-        <ha-card>
-          Invalid item specified: ${this.alert}.
-        </ha-card>
+        <ha-card> Invalid item specified: ${this.alert}. </ha-card>
       `;
     }
 
