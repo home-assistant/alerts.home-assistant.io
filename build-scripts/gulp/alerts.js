@@ -3,7 +3,7 @@ const gulp = require("gulp");
 const path = require("path");
 const fs = require("fs");
 const jsonfeedToAtom = require("jsonfeed-to-atom");
-const marked = require("marked");
+const { marked } = require("marked");
 const xss = require("xss");
 
 const { alertsDir, buildDir } = require("../paths");
@@ -12,7 +12,7 @@ class VersionedItem {
   constructor(versionString) {
     const parts = versionString
       .split(" ")
-      .map(s => s.trim())
+      .map((s) => s.trim())
       // Remove empty strings
       .filter(Boolean);
     parts.forEach((part, index) => {
@@ -54,7 +54,7 @@ function gatherAlertsMetadata() {
       for (const versionKey of ["packages", "integrations"]) {
         if (versionKey in metadata) {
           metadata[versionKey] = metadata[versionKey].map(
-            version => new VersionedItem(version)
+            (version) => new VersionedItem(version)
           );
         }
       }
@@ -69,13 +69,13 @@ function gatherAlertsMetadata() {
   return alerts;
 }
 
-gulp.task("gather-alerts", done => {
+gulp.task("gather-alerts", (done) => {
   const alerts = gatherAlertsMetadata();
   fs.writeFileSync(`${buildDir}/alerts.json`, JSON.stringify(alerts));
   done();
 });
 
-gulp.task("create-feeds", done => {
+gulp.task("create-feeds", (done) => {
   const alerts = gatherAlertsMetadata();
   const jsonfeed = {
     version: "https://jsonfeed.org/version/1",
@@ -83,37 +83,42 @@ gulp.task("create-feeds", done => {
     home_page_url: "https://alerts.home-assistant.io",
     feed_url: "https://alerts.home-assistant.io/feed.xml",
     description: "Alerts for breaking integrations of Home Assistant.",
-    icon: "https://alerts.home-assistant.io/images/favicon.png"
+    icon: "https://alerts.home-assistant.io/images/favicon.png",
   };
-  jsonfeed.items = alerts.map(alert => {
-    const text = fs.readFileSync(path.join(alertsDir, alert.filename), "utf-8");
-    return {
-      title: alert.title,
-      date_published: alert.created ? alert.created.toISOString() : undefined,
-      date_updated: alert.updated ? alert.updated.toISOString() : undefined,
-      url: alert.alert_url,
-      id: alert.filename,
-      content_html: xss(
-        marked(
-          // Strip out the metadata
-          text.substr(text.indexOf("---", 1) + 4),
-          {
-            breaks: true,
-            gfm: true,
-            tables: true
-          }
-        )
-      )
-    };
-  }).sort( (a, b) => {
-    if (a.date_published > b.date_published){
-      return -1;
-    }
-    if (a.date_published < b.date_published){
-      return 1;
-    }
-    return 0;
-  });
+  jsonfeed.items = alerts
+    .map((alert) => {
+      const text = fs.readFileSync(
+        path.join(alertsDir, alert.filename),
+        "utf-8"
+      );
+      return {
+        title: alert.title,
+        date_published: alert.created ? alert.created.toISOString() : undefined,
+        date_updated: alert.updated ? alert.updated.toISOString() : undefined,
+        url: alert.alert_url,
+        id: alert.filename,
+        content_html: xss(
+          marked(
+            // Strip out the metadata
+            text.substr(text.indexOf("---", 1) + 4),
+            {
+              breaks: true,
+              gfm: true,
+              tables: true,
+            }
+          )
+        ),
+      };
+    })
+    .sort((a, b) => {
+      if (a.date_published > b.date_published) {
+        return -1;
+      }
+      if (a.date_published < b.date_published) {
+        return 1;
+      }
+      return 0;
+    });
   fs.writeFileSync(`${buildDir}/feed.xml`, jsonfeedToAtom(jsonfeed));
   done();
 });
