@@ -1,5 +1,5 @@
 ---
-title: "Tuya: Delay in status syncing"
+title: "Tuya: Delay in state syncing"
 created: 2021-11-19 00:00:00
 integrations:
   - tuya
