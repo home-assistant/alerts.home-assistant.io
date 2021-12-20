@@ -1,9 +1,9 @@
 ---
 title: "New Neato Botvacs Do Not Support Existing API"
-created: 2021-08-11 13:27:00
+created: 2021-12-20 13:27:00
 integrations:
   - neato
-homeassistant: "any"
+homeassistant: "*"
 ---
 
 New Neato Botvacs no longer use the existing API that the current integration supports. So far the Neato D8 is using a new app and has no known API.
