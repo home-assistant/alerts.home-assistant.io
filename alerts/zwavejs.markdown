@@ -5,7 +5,7 @@ updated: 2022-01-17 12:00:00
 integrations:
   - zwave_js
 github_issue: https://github.com/zwave-js/node-zwave-js/issues/3906
-homeassistant: ">0.59"
+homeassistant: ">2021.2"
 ---
 
 While 700 series Z-Wave Controllers are supported by Z-Wave JS, the firmware for those devices presently has a bug that can cause the mesh to be flooded on some networks and the controller to become unresponsive. At present, all 700 series controllers share the same firmware and are subject to this bug. Z-Wave JS and several manufacturers have notified Silicon Laboratories and are awaiting resolution.
