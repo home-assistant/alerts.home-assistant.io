@@ -12,3 +12,7 @@ Samsung doesn't have a bug tracker but here are two related discussions:
 
 - [Is there any method to disable “blocking insecure websocket connection” in version 16?](https://forum.developer.samsung.com/t/is-there-any-method-to-disable-blocking-insecure-websocket-connection-in-version-16/17747)
 - [Cannot make WebSocket connection without SSL](https://forum.developer.samsung.com/t/cannot-make-websocket-connection-without-ssl/18080)
+
+## Workaround
+
+Use a different browser.
