@@ -1673,10 +1673,10 @@ liftoff@^3.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lit-element@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.1.1.tgz#562d5ccbc8ba0c01d8ba4a0ac3576263167d2ccb"
-  integrity sha512-14ClnMAU8EXnzC+M2/KDd3SFmNUn1QUw1+GxWkEMwGV3iaH8ObunMlO5svzvaWlkSV0WlxJCi40NGnDVJ2XZKQ==
+lit-element@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.1.2.tgz#fe29b9a362cf6c0de93c7769f29f1b6c37c79e15"
+  integrity sha512-5VLn5a7anAFH7oz6d7TRG3KiTZQ5GEFsAgOKB8Yc+HDyuDUGOT2cL1CYTz/U4b/xlJxO+euP14pyji+z3Z3kOg==
   dependencies:
     "@lit/reactive-element" "^1.1.0"
     lit-html "^2.1.0"
