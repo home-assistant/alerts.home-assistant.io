@@ -9,7 +9,7 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/marked": "^4.0.1",
+    "@types/marked": "^4.0.2",
     "@types/memoize-one": "^5.1.2",
     "gulp": "^4.0.2",
     "js-yaml": "^4.1.0",
