@@ -1,7 +1,7 @@
 ---
 title: "Twitch API v5 shutting down"
 created: 2022-02-11 12:00:00
-updated: 2022-02-1112:00:00
+updated: 2022-02-11 12:00:00
 integrations:
   - twitch
 github_issue: https://github.com/home-assistant/core/issues/54385
