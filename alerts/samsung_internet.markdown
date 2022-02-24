@@ -1,5 +1,5 @@
 ---
-title: "Samsung Internet 16+ blocks insecure websocket connections"
+title: "Samsung Internet 16.0 and 16.1 block insecure websocket connections"
 created: 2022-01-19 0:00:00
 integrations:
   - frontend
@@ -15,4 +15,6 @@ Samsung doesn't have a bug tracker but here are two related discussions:
 
 ## Workaround
 
-Use a different browser.
+This is fixed in Samsung Internet 16.2 which is currently available in the beta channel.
+
+Another workaround is to visit Home Assistant over `https://` only or use a different browser.
