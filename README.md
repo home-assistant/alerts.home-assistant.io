@@ -38,4 +38,4 @@ List of impacted Python packages combined with version ranges.
 
 ## Deployment
 
-Deployments are handled by [Netlify](https://www.netlify.com/), on each merge to master a new side will be build.
+Deployments are handled by [Netlify](https://www.netlify.com/), on each merge to master a new site will be built.
