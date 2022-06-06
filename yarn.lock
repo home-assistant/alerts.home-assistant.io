@@ -3159,10 +3159,10 @@ xmlbuilder@^15.1.1:
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
   integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
 
-xss@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/xss/-/xss-1.0.11.tgz#211cb82e95b5071d4c75d597283c021157ebe46a"
-  integrity sha512-EimjrjThZeK2MO7WKR9mN5ZC1CSqivSl55wvUK5EtU6acf0rzEE1pN+9ZDrFXJ82BRp3JL38pPE6S4o/rpp1zQ==
+xss@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/xss/-/xss-1.0.12.tgz#623ca33102853a2fc5cb1d10542b492dd0296a73"
+  integrity sha512-8pXgz5BUUfKMrb81tmcbvLNA97ab4d6HdoBHYF5XYHa8oarc2s64hF+oqI4FhBHVBWvEM1wHGy+vqt8kZhCaNw==
   dependencies:
     commander "^2.20.3"
     cssfilter "0.0.10"
