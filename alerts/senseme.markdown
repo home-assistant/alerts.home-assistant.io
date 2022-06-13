@@ -7,4 +7,4 @@ integrations:
 
 ## Summary
 
-The latest firmware for Haiku devices no longer speaks the SenseMe protocol and will not work with this integration.
+The latest firmware for Haiku devices no longer speaks the SenseMe protocol and will not work with this integration. For version v3 firmware and later, use the [Big Ass Fans](https://www.home-assistant.io/integrations/baf/) integration instead.
