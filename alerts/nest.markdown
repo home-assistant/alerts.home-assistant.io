@@ -17,9 +17,11 @@ New users may sign up using *Web Auth* without issue. Follow the [documentation]
 
 ## Existing Users: App Auth
 
-If you created *App Auth* credentials after Feb 28, 2022 and your integration is currently broken, then follow the workaround instructions to move to *Web Auth* in the [github issue](https://github.com/home-assistant/core/issues/67662#issuecomment-1144425848).
+If you previously successfully configured Nest and Home Assistant with *App Auth* then follow the instructions for [Deprecated App Auth Credentials](https://www.home-assistant.io/integrations/nest/#deprecated-app-auth-credentials).
 
-For everyone else, a future version of Home Assistant will walk you through the steps to create new *Web Auth* credentials and upgrade your integration. You will need to upgrade before October to avoid interruption.
+Nest is now configured entirely from the UI using [Application Credentials](https://www.home-assistant.io/integrations/application_credentials/) and the configuration flow will walk you through the steps of creating new credentails the right way.
+
+You will need to upgrade to *Web Auth* before October to avoid interruption.
 
 ## Existing Users: Web Auth
 
