@@ -21,7 +21,7 @@ If you previously successfully configured Nest and Home Assistant with *App Auth
 
 Nest is now configured entirely from the UI using [Application Credentials](https://www.home-assistant.io/integrations/application_credentials/) and the configuration flow will walk you through the steps of creating new credentails the right way.
 
-You will need to upgrade before October to avoid interruption.
+You will need to upgrade to *Web Auth* before October to avoid interruption.
 
 ## Existing Users: Web Auth
 
