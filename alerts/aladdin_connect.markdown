@@ -2,7 +2,7 @@
 title: "Aladdin Connect is turning off their previous connection method"
 created: 2022-07-14 06:00:00
 integrations:
-  - yeelight
+  - aladdin_connect
 homeassistant: "<2022.7"
 ---
 
