@@ -8,4 +8,6 @@ homeassistant: "<2022.7"
 
 ## Summary
 
-Genie Company, owner of Aladdin products, is shutting down the previous method of connection that utilized scraping of the Android application. Home Assistant moved to the new connection using WebSockets in the 2022.7 release. If you are using a previous version then Home Assistant will no longer be able to connect to your Aladdin devices.
+Home Assistant 2022.6 and earlier used an old way of interacting with Aladdin products which is no longer supported.
+
+Home Assistant 2022.7 implements a modern way. Users of Aladdin products should update as soon as possible to be able to continue using their Aladdin products uninterrupted.
