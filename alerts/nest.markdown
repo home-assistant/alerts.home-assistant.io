@@ -9,7 +9,7 @@ github_issue: https://github.com/home-assistant/core/issues/67662#issuecomment-1
 The primary authentication method recommended by the Nest Home Assistant integration called *Desktop*, *Installed App* or *OOB* auth was deprecated for new uses on February 28th, 2022 and will be disabled for all users on October 3, 2022. See the [Google Developer blog](https://developers.googleblog.com/2022/02/making-oauth-flows-safer.html#disallowed-oob)
 for announcement details.
 
-**Existing must upgrade to *Web Auth* credentials by Ocotober 3, 2022.**
+**Existing must upgrade to *Web Auth* credentials by October 3, 2022.**
 
 ## New Users
 
@@ -25,7 +25,7 @@ You will need to upgrade to *Web Auth* before October to avoid interruption.
 
 ## Existing Users: Web Auth
 
-Users who signed up using *Web Auth* are not affected by the App Auth deprecation. However, as of 2022.06 the *My Home Assistant* URL is now the default redirect URL and may need to be updated in the Google Cloud Console to avoid a `redirect_uri_mismatch` ([more info](https://www.home-assistant.io/integrations/nest/#troubleshooting)).
+Users who signed up using *Web Auth* are not affected by the App Auth deprecation. However, as of `2022.6` the *My Home Assistant* URL is now the default redirect URL and may need to be updated in the Google Cloud Console to avoid a `redirect_uri_mismatch` ([more info](https://www.home-assistant.io/integrations/nest/#troubleshooting)).
 
 # Background
 
