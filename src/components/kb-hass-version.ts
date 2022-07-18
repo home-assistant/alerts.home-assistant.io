@@ -21,15 +21,15 @@ class KbHassVersion extends LitElement {
 
     return html`
       ${min && max
-        ? html`
+        ? `
             ${min}…${max}
           `
         : min
-        ? html`
+        ? `
             >=${min}
           `
         : max
-        ? html`
+        ? `
             <${max}
           `
         : "all versions"}
