@@ -27,17 +27,11 @@ class KbDisplayVersion extends LitElement {
           `
         : pkg}
       ${min && max
-        ? html`
-            (${min}…${max})
-          `
+        ? `(${min}…${max})`
         : min
-        ? html`
-            (>=${min})
-          `
+        ? `(>=${min})`
         : max
-        ? html`
-            (<${max})
-          `
+        ? `(<${max})`
         : ""}
     `;
   }
