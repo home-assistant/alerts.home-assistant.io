@@ -17,15 +17,15 @@ class KbHassVersion extends LitElement {
   }
 
   protected render(): TemplateResult {
-    const { min, max } = this.version;
+    const { introduced_in, resolved_in } = this.version;
 
     return html`
-      ${min && max
-        ? `${min}…${max}`
-        : min
-        ? `>=${min}`
-        : max
-        ? `<${max}`
+      ${introduced_in && resolved_in
+        ? `${introduced_in}…<${resolved_in}`
+        : introduced_in
+        ? `>=${introduced_in}`
+        : resolved_in
+        ? `<${resolved_in}`
         : "all versions"}
     `;
   }

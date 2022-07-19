@@ -24,9 +24,9 @@ class VersionedItem {
       part = part.replace(/,/, "");
 
       if (part[0] === ">") {
-        this.min = part.substr(1);
+        this.introduced_in = part.substr(1);
       } else if (part[0] === "<") {
-        this.max = part.substr(1);
+        this.resolved_in = part.substr(1);
       } else {
         throw new Error(`Error parsing ${this.package}: ${part}`);
       }

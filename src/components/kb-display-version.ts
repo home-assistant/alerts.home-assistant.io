@@ -18,7 +18,7 @@ class KbDisplayVersion extends LitElement {
   }
 
   protected render(): TemplateResult {
-    const { package: pkg, min, max } = this.version;
+    const { package: pkg, introduced_in, resolved_in } = this.version;
 
     return html`
       ${this.href
@@ -26,12 +26,12 @@ class KbDisplayVersion extends LitElement {
             <a href=${this.href}>${pkg}</a>
           `
         : pkg}
-      ${min && max
-        ? `(${min}…${max})`
-        : min
-        ? `(>=${min})`
-        : max
-        ? `(<${max})`
+      ${introduced_in && resolved_in
+        ? `(${introduced_in}…<${resolved_in})`
+        : introduced_in
+        ? `(>=${resolved_in})`
+        : resolved_in
+        ? `(<${resolved_in})`
         : ""}
     `;
   }
