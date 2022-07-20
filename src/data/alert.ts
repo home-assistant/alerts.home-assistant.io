@@ -1,7 +1,7 @@
 export interface VersionSpec {
   package: string;
-  introduced_in?: string;
-  resolved_in?: string;
+  min_version?: string;
+  resolved_in_version?: string;
 }
 export interface Alert {
   title: string;
