@@ -1715,10 +1715,10 @@ liftoff@^3.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lit-element@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.2.1.tgz#f917d22451b848768f84164d41eb5e18903986e3"
-  integrity sha512-2PxyE9Yq9Jyo/YBK2anycaHcqo93YvB5D+24JxloPVqryW/BOXekne+jGsm0Ke3E5E2v7CDgkmpEmCAzYfrHCQ==
+lit-element@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.2.2.tgz#d148ab6bf4c53a33f707a5168e087725499e5f2b"
+  integrity sha512-6ZgxBR9KNroqKb6+htkyBwD90XGRiqKDHVrW/Eh0EZ+l+iC+u+v+w3/BA5NGi4nizAVHGYvQBHUDuSmLjPp7NQ==
   dependencies:
     "@lit/reactive-element" "^1.3.0"
     lit-html "^2.2.0"
