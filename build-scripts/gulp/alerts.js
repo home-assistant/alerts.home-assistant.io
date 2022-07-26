@@ -24,7 +24,7 @@ class VersionedItem {
       part = part.replace(/,/, "");
 
       if (part[0] === ">") {
-        this.min_version = part.substr(1);
+        this.affected_from_version = part.substr(1);
       } else if (part[0] === "<") {
         this.resolved_in_version = part.substr(1);
       } else {

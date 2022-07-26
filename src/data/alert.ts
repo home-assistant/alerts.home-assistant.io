@@ -1,6 +1,6 @@
 export interface VersionSpec {
   package: string;
-  min_version?: string;
+  affected_from_version?: string;
   resolved_in_version?: string;
 }
 export interface Alert {
@@ -16,4 +16,4 @@ export interface Alert {
 
 export const fetchAlerts = (): Promise<Alert[]> =>
   // Add domain because used inside custom element which can be used anywhere
-  fetch("https://alerts.home-assistant.io/alerts.json").then(r => r.json());
+  fetch("https://alerts.home-assistant.io/alerts.json").then((r) => r.json());

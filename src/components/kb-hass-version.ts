@@ -3,7 +3,7 @@ import {
   LitElement,
   property,
   TemplateResult,
-  customElement
+  customElement,
 } from "lit-element";
 import { VersionSpec } from "../data/alert";
 
@@ -17,13 +17,13 @@ class KbHassVersion extends LitElement {
   }
 
   protected render(): TemplateResult {
-    const { min_version, resolved_in_version } = this.version;
+    const { affected_from_version, resolved_in_version } = this.version;
 
     return html`
-      ${min_version && resolved_in_version
-        ? `${min_version}…<${resolved_in_version}`
-        : min_version
-        ? `>=${min_version}`
+      ${affected_from_version && resolved_in_version
+        ? `${affected_from_version}…<${resolved_in_version}`
+        : affected_from_version
+        ? `>=${affected_from_version}`
         : resolved_in_version
         ? `<${resolved_in_version}`
         : "all versions"}
