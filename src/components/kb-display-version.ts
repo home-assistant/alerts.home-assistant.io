@@ -3,7 +3,7 @@ import {
   LitElement,
   property,
   TemplateResult,
-  customElement
+  customElement,
 } from "lit-element";
 import { VersionSpec } from "../data/alert";
 
@@ -18,20 +18,20 @@ class KbDisplayVersion extends LitElement {
   }
 
   protected render(): TemplateResult {
-    const { package: pkg, min, max } = this.version;
+    const {
+      package: pkg,
+      affected_from_version,
+      resolved_in_version,
+    } = this.version;
 
     return html`
-      ${this.href
-        ? html`
-            <a href=${this.href}>${pkg}</a>
-          `
-        : pkg}
-      ${min && max
-        ? `(${min}…${max})`
-        : min
-        ? `(>=${min})`
-        : max
-        ? `(<${max})`
+      ${this.href ? html` <a href=${this.href}>${pkg}</a> ` : pkg}
+      ${affected_from_version && resolved_in_version
+        ? `(${affected_from_version}…<${resolved_in_version})`
+        : affected_from_version
+        ? `(>=${resolved_in_version})`
+        : resolved_in_version
+        ? `(<${resolved_in_version})`
         : ""}
     `;
   }
