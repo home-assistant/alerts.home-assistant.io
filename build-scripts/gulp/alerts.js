@@ -71,6 +71,20 @@ function gatherAlertsMetadata() {
 
 gulp.task("gather-alerts", (done) => {
   const alerts = gatherAlertsMetadata();
+
+  // Backwards compat for change made in July 2022
+  for (const alert of alerts) {
+    if (!("homeassistant" in alert)) {
+      continue;
+    }
+    if ("affected_from_version" in alert.homeassistant) {
+      alert.homeassistant.min = alert.homeassistant.affected_from_version;
+    }
+    if ("resolved_in_version" in alert.homeassistant) {
+      alert.homeassistant.max = alert.homeassistant.resolved_in_version;
+    }
+  }
+
   fs.writeFileSync(`${buildDir}/alerts.json`, JSON.stringify(alerts));
   done();
 });
