@@ -7,7 +7,7 @@ github_issue: https://github.com/home-assistant/home-assistant.io/pull/12591
 homeassistant: ">0.30"
 ---
 
-Dark Sky has been [acquired by Apple](https://blog.darksky.net/dark-sky-has-a-new-home/) and is no longer allowing new registrations for their API and will the API completely on March 31st, 2023.
+Dark Sky has been [acquired by Apple](https://blog.darksky.net/dark-sky-has-a-new-home/) and is no longer allowing new registrations for their API and will be completely shut down on March 31st, 2023.
 
 New users will no longer be able to obtain an API key which is a necessary requirement to configure the [Dark Sky integration](https://www.home-assistant.io/integrations/weather.darksky/) in Home Assistant. The Home Assistant website features [alternative weather integrations](https://www.home-assistant.io/integrations/#weather).
 
