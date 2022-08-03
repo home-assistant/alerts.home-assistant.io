@@ -1,5 +1,5 @@
 ---
-title: "Dark Sky API is shutting down"
+title: "Dark Sky is shutting down"
 created: 2020-03-31 14:40:00
 integrations:
   - darksky
