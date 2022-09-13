@@ -81,10 +81,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.44.tgz#980cc5a29a3ef3bea6ff1f7d021047d7ea575e21"
   integrity sha512-iaIVzr+w2ZJ5HkidlZ3EJM8VTZb2MJLCjw3V+505yVts0gRC4UMvjw0d1HPtGqI/HQC/KdsYtayfzl+AXY2R8g==
 
-"@types/marked@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.6.tgz#9ca544c1057f3c8b3f649b5e8e56d9241e3ca22d"
-  integrity sha512-ITAVUzsnVbhy5afxhs4PPPbrv2hKVEDH5BhhaQNQlVG0UNu+9A18XSdYr53nBdHZ0ADEQLl+ciOjXbs7eHdiQQ==
+"@types/marked@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.7.tgz#400a76809fd08c2bbd9e25f3be06ea38c8e0a1d3"
+  integrity sha512-eEAhnz21CwvKVW+YvRvcTuFKNU9CV1qH+opcgVK3pIMI6YZzDm6gc8o2vHjldFk6MGKt5pueSB7IOpvpx5Qekw==
 
 "@types/memoize-one@^5.1.2":
   version "5.1.2"
