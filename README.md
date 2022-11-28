@@ -36,6 +36,10 @@ List of impacted integrations combined with version ranges.
 
 List of impacted Python packages combined with version ranges.
 
+### Supervisor (optional)
+
+Supervisor versions impacted.
+
 ## Deployment
 
 Deployments are handled by [Netlify](https://www.netlify.com/), on each merge to master a new site will be built.
