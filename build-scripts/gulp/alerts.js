@@ -51,6 +51,12 @@ function gatherAlertsMetadata() {
         `homeassistant ${metadata.homeassistant || ""}`
       );
 
+      if (metadata.supervisor) {
+        metadata.supervisor = new VersionedItem(
+          `supervisor ${metadata.supervisor}`
+        );
+      }
+
       for (const versionKey of ["packages", "integrations"]) {
         if (versionKey in metadata) {
           metadata[versionKey] = metadata[versionKey].map(
