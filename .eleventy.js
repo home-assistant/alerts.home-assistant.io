@@ -28,6 +28,7 @@ module.exports = function (eleventyConfig) {
     alerts.map(alert => (
       {
         title: alert.data.title,
+        content: alert.template.frontMatter.content,
         created: alert.data.created,
         updated: alert.data.updated,
         integrations: alert.data.integrations?.map(integration => new VersionedItem(integration)),
