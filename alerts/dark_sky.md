@@ -4,7 +4,7 @@ created: 2020-03-31 14:40:00
 integrations:
   - darksky
 github_issue: https://github.com/home-assistant/home-assistant.io/pull/12591
-homeassistant: ">0.30"
+homeassistant: ">0.3"
 ---
 
 Dark Sky has been [acquired by Apple](https://blog.darksky.net/dark-sky-has-a-new-home/) and is no longer allowing new registrations for their API and will be completely shut down on March 31st, 2023.

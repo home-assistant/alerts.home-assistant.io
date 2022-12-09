@@ -4,9 +4,4 @@ set -e
 cd "$(dirname "$0")/.."
 
 rm -rf dist
-cp -r public dist
-cp -r alerts dist/
-yarn gulp gather-alerts create-feeds gen-entrypoint-dev
-yarn serve dist &
-yarn rollup -c --watch
-wait
+./node_modules/.bin/eleventy --serve

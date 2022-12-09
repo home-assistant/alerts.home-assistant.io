@@ -1,0 +1,33 @@
+---
+eleventyExcludeFromCollections: true
+permalink: feed.xml
+metadata:
+    title: Home Assistant Alerts
+    subtitle: Alerts for breaking integrations of Home Assistant.
+    language: en
+    url: "https://alerts.home-assistant.io"
+---
+{%- assign firstAlert = collections.sortedAlertsByUpdate | first -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+    <title>{{ metadata.title }}</title>
+    <id>{{ metadata.url }}/{{ permalink }}</id>
+    <updated>{% if firstAlert.data.updated %}{{ firstAlert.data.updated | dateToRfc3339 }}{% else %}{{ firstAlert.data.created | dateToRfc3339 }}{% endif %}</updated>
+    <link rel="self" type="application/atom+xml" href="{{ metadata.url }}/{{ permalink }}"/>
+    <link rel="alternate" type="application/json" href="{{ metadata.url }}/{{ permalink }}"/>
+    <link rel="alternate" type="text/html" href="{{ metadata.url }}"/>
+    <icon>{{ metadata.url }}/static/favicon.png</icon>
+    <logo>{{ metadata.url }}/static/favicon.png</logo>
+    <subtitle>{{ metadata.subtitle }}</subtitle>
+    {%- for alert in collections.sortedAlertsByCreated %}
+        {%- assign absolutePostUrl = alert.url | prepend: metadata.url %}
+        <entry>
+            <title>{{ alert.data.title }}</title>
+            <link rel="alternate" href="{{ metadata.url }}{{ alert.url }}"/>
+            <updated>{% if alert.data.updated %}{{ alert.data.updated | dateToRfc3339 }}{% else %}{{ alert.data.created | dateToRfc3339 }}{% endif %}</updated>
+            <published>{{ alert.data.created | dateToRfc3339 }}</published>
+            <id>{{ metadata.url }}{{ alert.url }}</id>
+            <content xml:lang="{{ metadata.language }}" type="html" lang="{{ metadata.language }}">{{ alert.templateContent }}</content>
+        </entry>
+  {%- endfor %}
+</feed> 
