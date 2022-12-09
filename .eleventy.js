@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     { 
       "_headers": "_headers",
-      "alerts/*.md": "alerts",
       "mobile.json": "mobile.json",
       "static": "static",
     }
@@ -49,11 +48,11 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.on('eleventy.after', async () => {
       // 11ty does not yet support .markdown files, homeassistant_alerts expect .markdown so we trick it
-      const basePath = `${__dirname}/dist/alerts`
-      fs.readdirSync(basePath).forEach(file => {
+      const srcBasePath = `${__dirname}/alerts`
+      fs.readdirSync(srcBasePath).forEach(file => {
         if (file.endsWith(".md")) {
           const filename = file.split(".")[0]
-          fs.rename(`${basePath}/${filename}.md`, `${basePath}/${filename}.markdown`, () => {})
+          fs.copyFileSync(`${srcBasePath}/${filename}.md`, `${__dirname}/dist/alerts/${filename}.markdown`)
         }
       });
     });
@@ -64,8 +63,8 @@ module.exports = function (eleventyConfig) {
         input: ".",
         output: "dist",
         layouts: "layouts",
-        htmlTemplateEngine: "liquid",
-        markdownTemplateEngine: "liquid"
       },
+      htmlTemplateEngine: "liquid",
+      markdownTemplateEngine: "liquid",
     };
 }
