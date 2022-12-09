@@ -1,10 +1,12 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const fs = require("fs")
 const VersionedItem = require("./utils/versioned_item")
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(
     { 
       "_headers": "_headers",
+      "alerts/*.md": "alerts",
       "mobile.json": "mobile.json",
       "static": "static",
     }
@@ -36,11 +38,24 @@ module.exports = function (eleventyConfig) {
         supervisor: !alert.data.supervisor ? undefined : new VersionedItem(
           `supervisor ${alert.data.supervisor}`
         ),
-        filename: alert.inputPath.replace("./alerts/", ""),
+        // 11ty does not yet support .markdown files, homeassistant_alerts expect .markdown so we trick it
+        filename: alert.inputPath.replace("./alerts/", "").replace(".md", ".markdown"),
         alert_url: `https://alerts.home-assistant.io${alert.url}`
       }
     )
   )));
+
+
+    eleventyConfig.on('eleventy.after', async () => {
+      // 11ty does not yet support .markdown files, homeassistant_alerts expect .markdown so we trick it
+      const basePath = `${__dirname}/dist/alerts`
+      fs.readdirSync(basePath).forEach(file => {
+        if (file.endsWith(".md")) {
+          const filename = file.split(".")[0]
+          fs.rename(`${basePath}/${filename}.md`, `${basePath}/${filename}.markdown`, () => {})
+        }
+      });
+    });
   
 
   return {
