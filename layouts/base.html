@@ -1,0 +1,62 @@
+---
+title: "Alerts"
+description: "Alerts for breaking integrations of Home Assistant."
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title %}{{title}} | {% endif %}Home Assistant Alerts</title>
+    <meta
+      property="og:title"
+      content="{% if title %}{{title}} | {% endif %}Home Assistant Alerts"
+    />
+    <meta property="og:site_name" content="Home Assistant Alerts" />
+    <meta property="og:url" content="https://alerts.home-assistant.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="twitter:site" content="@home_assistant" />
+    <meta name="twitter:title" content="Home Assistant Alerts" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/static/favicon.png"
+    />
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <a href="/">
+          <img src="https://brands.home-assistant.io/homeassistant/logo.png">
+          <h1 class="nav-title">Home Assistant Alerts</h1>
+        </a>
+      </div>
+    </div>
+
+    <div class="container content">
+      {{ content }}
+    </div>
+
+    <div class="container">
+      <div class="footer">
+          <a href="https://www.home-assistant.io" target="_blank">
+            Home Assistant Website
+          </a>
+          <span class="serperator">–</span>
+          <a href="/feed.xml" target="_blank">
+            Alerts RSS Feed
+          </a>
+          <span class="serperator">–</span>
+          <a href="https://github.com/home-assistant/alerts.home-assistant.io/tree/master/alerts" target="_blank">
+            Propose An Alert
+          </a>
+      </div>
+    </div>
+    <script src="/static/scripts.js"></script>
+  </body>
+</html>

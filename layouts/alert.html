@@ -1,0 +1,44 @@
+---
+layout: base
+tags: "alert"
+---
+<div class="alert-contents">
+    <h2>{{ title }}</h2>
+    {{ content }}
+</div>
+<div class="alert-sidebar">
+    <a href="/" class="back-btn">⬅ Back to the overview</a>
+    <div><span>Created:</span><span class="unformated-date">{{ created }}</span></div>
+    {% if updated %}
+    <div><span>Updated:</span><span class="unformated-date">{{ updated }}</span></div>
+    {% endif %}
+    <div><span>Home Assistant:</span>{{ homeassistant }}</div>
+    {% if integrations %}
+        <div><span>Integrations:</span></div>
+        {%- for integration in integrations -%}
+        <li>
+            <a href="https://www.home-assistant.io/integrations/homematicip_cloud/{{ integration }}/" target="_blank">
+                <img class="integration-logo" src="https://brands.home-assistant.io/_/{{ integration }}/icon.png" />
+                {{ integration }}
+            </a>
+        </li>
+        {%- endfor -%}
+    {% endif %}
+    {% if packages %}
+        <div><span>Packages:</span></div>
+        {%- for package in packages -%}
+        <li><a href="https://pypi.org/project/{{ package }}/" target="_blank">{{ package }}</a></li>
+        {%- endfor -%}
+    {% endif %}
+
+    {% if github_issue %}
+    <div><span>GitHub Issue:</span></div>
+    <div><a href="{{ github_issue }}" target="_blank">{{ github_issue | formatGitHubUrl }}</a></div>
+    {% endif %}
+
+
+    <a class="edit-on-github" title="Edit this page on GitHub" href="https://github.com/home-assistant/alerts.home-assistant.io/tree/master/{{page.inputPath | remove_first: './'}}" target="_blank">
+        Edit alert on GitHub
+    </a>
+
+</div>

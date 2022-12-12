@@ -2,11 +2,9 @@
 
 Home Assistant Alerts is a database of alerts for Home Assistant users. Alerts will be able to be tied to integrations, Python versions, Python packages or operating systems.
 
-The goal will be to integrate this into Home Assistant so that users can subscribe to alerts that impact their installation. It will also function as a standalone website too.
-
 ## Development
 
-Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:5000 and at http://localhost:5000/demo_alert_link.html.
+Install dependencies using `yarn`. Then run `script/develop`. Dev environment will be available on http://localhost:8080.
 
 ## Alert metadata
 

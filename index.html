@@ -1,0 +1,30 @@
+---
+layout: base
+title: Alerts
+---
+<div>
+{%- for alert in collections.sortedAlertsByUpdate -%}
+    <a href="{{ alert.url }}">
+        <div class="alert-card">
+            <h2>{{ alert.data.title }}</h2>
+            <div class="alert-card-footer">
+                <div class="date">
+                    <span class="unformated-date">{{ alert.data.created }}</span>
+                    {% if alert.data.updated %} (Updated: <span class="unformated-date">{{ alert.data.updated }}</span>){% endif %}
+                </div>
+                {%- for integration in alert.data.integrations -%}
+                <div class="integration">
+                    <img class="integration-logo" src="https://brands.home-assistant.io/_/{{ integration }}/icon.png" />
+                    {{ integration }}
+                </div>
+                {%- endfor -%}
+                {%- for package in alert.data.packages -%}
+                <div class="package">
+                    {{ package }}
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </a>
+{%- endfor -%}
+</div>

@@ -14,5 +14,3 @@
 /alerts.json
   Cache-Control: public, max-age: 3600, s-maxage=3600
 
-/ce-alert-link.js
-  Cache-Control: public, max-age: 3600, s-maxage=3600

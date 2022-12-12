@@ -1,0 +1,7 @@
+{
+	"name": "Home Assistant Alerts",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-16-bullseye",
+	"forwardPorts": [8080],
+	"postCreateCommand": "yarn install",
+	"remoteUser": "node"
+}
