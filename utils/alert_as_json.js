@@ -1,6 +1,6 @@
 const VersionedItem = require("./versioned_item")
 
-module.exports = function(alert, includeContent) {
+module.exports = function(alert, extended) {
     const contents  = {
         title: alert.data.title,
         created: alert.data.created,
@@ -17,7 +17,9 @@ module.exports = function(alert, includeContent) {
         filename: alert.inputPath.replace("./alerts/", "").replace(".md", ".markdown"),
         alert_url: `https://alerts.home-assistant.io${alert.url}`
       }
-    if (includeContent) {
+    if (extended) {
+        contents["file_slug"] = alert.fileSlug
+        contents["tags"] = alert.data.tags
         contents["content"] = alert.template.frontMatter.content
     }
     return contents
