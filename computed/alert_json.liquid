@@ -1,0 +1,8 @@
+---
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.alert
+  size: 1
+permalink: "/alerts/{{ pagination.items[0].fileSlug }}.json"
+---
+{{ pagination.items[0] | alertAsJson }}
