@@ -1,5 +1,5 @@
 ---
-title: "Tibber is blocking old and dev version of Home Assistant"
+title: "Tibber has migrated to new endpoint"
 created: 2023-01-04 20:00:00
 integrations:
   - tibber
@@ -10,7 +10,7 @@ homeassistant: "<2022.12"
 
 Home Assistant 2022.11 and earlier is no longer supported.
 Tibber switched off the websocket server at api.tibber.com
-Home Assistant 2022.12 or later should work, but currently also 2023.2.0.dev0 is blocked.
+Home Assistant 2022.12 or later should work.
 
 [Tibber status report](https://status.tibber.com/incidents/fkh9ml637jf1)
 
