@@ -1,0 +1,11 @@
+---
+title: "Dublin Bus Transport integration not usable"
+created: 2023-01-26 10:46:00
+integrations:
+  - dublin_bus_transport
+github_issue: https://github.com/home-assistant/core/issues/74976
+homeassistant: ">0.30"
+---
+
+The Dublin Bus Real Time API used for this integration - https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=[Stop ID] - ceased working in June 2022.
+A new API is available but this integration does not use it.
