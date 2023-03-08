@@ -1,6 +1,8 @@
 ---
 title: "Supervisor Security Disclosure"
 created: 2023-03-08 0:00:00
+integrations:
+  - hassio
 supervisor: "<2023.03.01"
 ---
 
