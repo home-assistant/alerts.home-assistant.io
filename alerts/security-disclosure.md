@@ -3,7 +3,7 @@ title: "Supervisor Security Disclosure"
 created: 2023-03-08 0:00:00
 integrations:
   - hassio
-supervisor: "<2023.03.01"
+supervisor: "<2023.03.1"
 ---
 
 We were made aware of a security issue impacting installations using
