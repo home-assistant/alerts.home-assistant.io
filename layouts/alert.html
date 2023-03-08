@@ -12,7 +12,12 @@ tags: "alert"
     {% if updated %}
     <div><span>Updated:</span><span class="unformated-date">{{ updated }}</span></div>
     {% endif %}
+    {% if homeassistant %}
     <div><span>Home Assistant:</span>{{ homeassistant }}</div>
+    {% endif %}
+    {% if supervisor %}
+    <div><span>Supervisor:</span>{{ supervisor }}</div>
+    {% endif %}
     {% if integrations %}
         <div><span>Integrations:</span></div>
         {%- for integration in integrations -%}
