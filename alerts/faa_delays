@@ -1,0 +1,12 @@
+---
+title: "FAA Delays is temporarily not providing data"
+created: 2023-07-31 00:00:00
+integrations:
+  - faa_delays
+homeassistant: ">2021.3"
+---
+
+## Summary
+
+The FAA Delays API has been updated and the Home Assistant integration is not currently updating. Users with already set up integrations will see that it shows Unavailable. Users attempting to set up a new integration will receive an error. Work to remedy the problem is underway.
+
