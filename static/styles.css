@@ -39,6 +39,7 @@ html {
   
   .nav-title {
     color: var(--primary-text-color) !important;
+    font-size: 3em;
   }
   
   .content {
@@ -121,8 +122,8 @@ html {
   }
   
   .nav-bar img {
-    height: 64px;
-    margin-right: 16px;
+    height: 48px;
+    margin-right: 24px;
   }
 
   .alert-contents {
