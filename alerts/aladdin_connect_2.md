@@ -7,6 +7,8 @@ integrations:
 
 ## Summary
 
-Genie is migrating to a new API on January 23rd, 2024, causing the Aladdin Connect integration in Home Assistant to stop working.
+Genie is migrating to a new API on January 23rd, 2024, causing the Aladdin Connect integration in Home Assistant to stop working. We recommend removing the integration from your Home Assistant installation once this happens.
 
-Genie is planning to address this by contributing an official integration for Aladdin Connect to Home Assistant using the new API in the future.
+Please note: Logging in to the updated 6.x version of the Aladdin Connect app will set your device to the new API. Thus, the integration will cease operating once you update your app.
+
+Genie plans to address this by contributing a new official integration for Aladdin Connect to Home Assistant using the new API in the future.
