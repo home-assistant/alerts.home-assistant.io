@@ -13,4 +13,4 @@ From April 1, 2024, Ambi Climate devices will no longer be able to connect to th
 
 As Ambiclimate devices require a connection to the manufacturers cloud server, they will cease to function from April 1 2024 onwards. We recommend removing the integration from your Home Assistant installation once this happens.
 
-Ambiclimate is allowing customers to export their private data, as well as offering a voluntary compensation policy for some customers. View the Ambiclimate website for more details
+Ambiclimate is allowing customers to export their private data, as well as offering a voluntary compensation policy for some customers. View the Ambiclimate website for more details.
