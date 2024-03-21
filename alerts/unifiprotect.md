@@ -3,6 +3,7 @@ title: "Unifi Protect 3.x backward incompatible changes"
 created: 2024-03-21 0:00:00
 integrations:
   - unifiprotect
+homeassistant: "<2024.3.2"
 ---
 
 ## Summary
