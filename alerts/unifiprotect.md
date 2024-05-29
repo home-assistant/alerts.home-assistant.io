@@ -7,4 +7,4 @@ integrations:
 
 ## Summary
 
-UniFi OS 4.x contains changes that are incompatible with current versions of Home Assistant. To avoid disruption, do not upgrade to UniFi OS 4.x.
+UniFi OS 4.x contains changes that are incompatible with the UniFi Protect integration in current versions of Home Assistant. To avoid disruption, do not upgrade to UniFi OS 4.x.
