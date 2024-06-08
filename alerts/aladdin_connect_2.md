@@ -1,9 +1,15 @@
 ---
-title: "Aladdin Connect integration will stop working January 23rd, 2024"
+title: "Aladdin Connect integration requires Home Assistant 2024.6 or later"
 created: 2024-01-19 00:00:01
+updated: 2024-06-07 00:00:01
 integrations:
   - aladdin_connect
+homeassistant: "<2024.6.0"
 ---
+
+## Update June 7, 2024
+
+Home Assistant 2024.6 includes an updated Aladdin Connect integration contributed by the company itself. Please update to continue using this integration.
 
 ## Summary
 
