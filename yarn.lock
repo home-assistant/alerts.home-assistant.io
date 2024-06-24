@@ -24,10 +24,10 @@
     ssri "^8.0.1"
     ws "^8.13.0"
 
-"@11ty/eleventy-plugin-rss@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-2.0.0.tgz#2c52a0a136da94e212be45888ce94c983508f476"
-  integrity sha512-863y7nAWxvhgix9zihBVMHiTFX8o4D7XZTLbYU1UjHw3ETh9Re90AP5POKvKLF9uuMvXrYeaxkdTvxucifUuUg==
+"@11ty/eleventy-plugin-rss@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-2.0.1.tgz#5e55660490b37c86d5b37b3b75b2e5ac26ee5330"
+  integrity sha512-GE0QFqBzthBufnXuc5gRoCw4WetabQdSK8QmQSfA/AMjOVZ9Y4xJ1WlvwmFaG9Fh119yrVrxKaZ7bPqowAym9g==
   dependencies:
     "@11ty/eleventy-utils" "^1.0.3"
     "@11ty/posthtml-urls" "1.0.0"
