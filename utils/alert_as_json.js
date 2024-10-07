@@ -20,7 +20,7 @@ module.exports = function(alert, extended) {
       }
     if (extended) {
         contents["tags"] = alert.data.tags
-        contents["content"] = alert.template.frontMatter.content
+        contents["content"] = alert.rawInput
     }
     return contents
   }
