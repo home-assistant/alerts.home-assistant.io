@@ -7,3 +7,7 @@ homeassistant: ">2023.08"
 ---
 
 Since Jan 24, 2025, The current APIs have been shutdown without much notice, causing the integration to fail. Work is being done to migrate to new endpoints. So please be patient while this work is done.
+
+
+You can follow the issue here.
+[Issue tracker](https://github.com/home-assistant/core/issues/136545)
