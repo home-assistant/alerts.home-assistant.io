@@ -10,6 +10,6 @@ On Febuary 1st 2025, Tesla is starting it's pay-per-use billing of the Tesla Fle
 
 Tesla has disabled this client ID, so all users of the Tesla Fleet integration need to upgrade to 2025.1 or later, and follow the [documentation](https://www.home-assistant.io/integrations/tesla_fleet/#configuration) configuration steps to setup a new developer application.
 
-If you are unable to setup your own developer application, Home Assistant has other paid integrations for working with Tesla:
+If you are unable to setup your own developer application, Home Assistant has other paid integrations that work with Tesla:
 - [Teslemetry](https://www.home-assistant.io/integrations/teslemetry)
 - [Tessie](https://www.home-assistant.io/integrations/tessie)
