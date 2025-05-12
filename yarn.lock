@@ -46,10 +46,10 @@
     debug "^4.3.4"
     posthtml-match-helper "^2.0.2"
 
-"@11ty/eleventy-plugin-rss@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-2.0.3.tgz#460d06987636b316abbaaaa67c7ae6aa4067d7e8"
-  integrity sha512-ubK97uahCLpKhORLfblgxLcoaNqTcKde1cH8CeRKNTFoUuuDSEjWZtodV9fKrg+uOp5X74dO43z1/io6hhs5Bw==
+"@11ty/eleventy-plugin-rss@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-2.0.4.tgz#3c0ba2792d5536345d5689068d598f26a8acfb75"
+  integrity sha512-LF60sGVlxGTryQe3hTifuzrwF8R7XbrNsM2xfcDcNMSliLN4kmB+7zvoLRySRx0AQDjqhPTAeeeT0ra6/9zHUQ==
   dependencies:
     "@11ty/eleventy-utils" "^2.0.0"
     "@11ty/posthtml-urls" "^1.0.1"
