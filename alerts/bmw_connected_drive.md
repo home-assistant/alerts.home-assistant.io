@@ -3,7 +3,7 @@ title: BMW APIs blocked
 created: 2025-10-03 20:00:00
 integrations:
   - bmw_connected_drive
-homeassistant: "all"
+homeassistant: ">2024.1.0"
 ---
 
 On September 29, 2025, the BMW has blocked third parties (i.e. the BMW Connected Drive integration) from executing requests against BMW servers.
