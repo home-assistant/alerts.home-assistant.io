@@ -1,11 +1,9 @@
 ---
-title: "New Neato Botvacs Do Not Support Existing API"
-created: 2021-12-20 13:27:00
+title: "Neato cloud is about to be disabled"
+created: 2025-10-20 22:00:00
 integrations:
   - neato
 homeassistant: ">0.30"
 ---
 
-New Neato Botvacs no longer use the existing API that the current integration supports. So far the Neato D8 is using a new app and has no known API.
-
-Neato says they have plans to add an API but as of now any botvac that requires the new "My Neato" app will not work with the existing integration.
+Vorwerk [announced](https://support.neatorobotics.com/support/solutions/articles/204000073686) the upcoming shutdown of all neato cloud services. Because of this shutdown, the integration will no longer be able to control any neato devices, and will thus stop working.
