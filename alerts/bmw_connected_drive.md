@@ -13,3 +13,8 @@ You will see error messages asking you to log in again without any success, and 
 
 More information about the new API change [here](https://github.com/home-assistant/core/issues/149750).
 Technical information on what is happening [here](https://github.com/home-assistant/core/issues/152646#issuecomment-3356106193).
+
+Through the BMW CarData Service official API and Streaming Data is available: [here](https://bmw-cardata.bmwgroup.com/thirdparty/public/home).
+The HACS Integration "BMW CarData for Home Assistant" uses the Streaming Data [here](https://github.com/kvanbiesen/bmw-cardata-ha).
+BMW-CarData-REST-API-Streaming is a project which allows connection via the API and Stream - however not integrated into Home Assistant [here](https://github.com/tabsl/BMW-CarData-REST-API-Streaming).
+
