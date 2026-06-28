@@ -3,6 +3,7 @@ title: Samsung is introducing a monthly subscription to use their API.
 created: 2026-06-28 00:00:00
 integrations:
   - smartthings
+homeassistant: "≥0.87"
 ---
 
 Samsung is introducing a $4.99/month subscription to use the SmartThings API. This will affect the Home Assistant SmartThings integration.
