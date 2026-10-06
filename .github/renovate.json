@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "enabledManagers": ["npm", "nvm"],
+  "minimumReleaseAge": "3 days",
+  "schedule": ["before 8am on monday"],
+  "semanticCommits": "disabled",
+  "labels": ["dependencies", "javascript"],
+  "lockFileMaintenance": {
+    "description": "Refresh the lock file weekly, so indirect dependencies come in one PR instead of one PR each",
+    "enabled": true,
+    "schedule": ["before 8am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Eleventy and its plugins",
+      "matchPackageNames": ["@11ty/**"],
+      "groupName": "Eleventy",
+      "groupSlug": "eleventy"
+    }
+  ]
+}
