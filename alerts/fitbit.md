@@ -4,6 +4,7 @@ created: 2026-11-07 21:00:00
 integrations:
   - fitbit
 github_issue: https://github.com/home-assistant/core/issues/190247
+homeassistant: "<2026.12.0"
 ---
 
 On November 2, 2026, Google permanently shut down the legacy Fitbit Web API and its OAuth endpoints following the end of developer support on September 30, 2026. Requests to the legacy Fitbit API now fail with `410 Gone`, so your Fitbit sensors will no longer update and re-authentication will not succeed. See Google's [Fitbit Web API Migration Guide](https://developers.google.com/health/migration) for details.
